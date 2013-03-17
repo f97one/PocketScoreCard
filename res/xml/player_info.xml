@@ -14,14 +14,24 @@
         <PreferenceCategory android:title="@string/pref_club_woods" >
             <CheckBoxPreference
                 android:defaultValue="true"
-                android:key="pref_club_1w" />
+                android:key="pref_club_1w"
+                android:title="@string/clubname_1wood" />
             <CheckBoxPreference
                 android:defaultValue="false"
-                android:key="pref_club_3w" />
-            <CheckBoxPreference android:key="pref_club_4w" />
-            <CheckBoxPreference android:key="pref_club_5w" />
-            <CheckBoxPreference android:key="pref_club_6w" />
-            <CheckBoxPreference android:key="pref_club_7w" />
+                android:key="pref_club_3w"
+                android:title="@string/clubname_3wood" />
+            <CheckBoxPreference
+                android:key="pref_club_4w"
+                android:title="@string/clubname_4wood" />
+            <CheckBoxPreference
+                android:key="pref_club_5w"
+                android:title="@string/clubname_5wood" />
+            <CheckBoxPreference
+                android:key="pref_club_6w"
+                android:title="@string/clubname_6wood" />
+            <CheckBoxPreference
+                android:key="pref_club_7w"
+                android:title="@string/clubname_7wood" />
         </PreferenceCategory>
         <PreferenceCategory android:title="@string/pref_club_irons" >
             <CheckBoxPreference android:key="pref_club_3i" />
