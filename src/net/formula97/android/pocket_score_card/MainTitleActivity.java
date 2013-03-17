@@ -20,5 +20,23 @@ public class MainTitleActivity extends Activity {
         return true;
     }
 
-    
+	/* (非 Javadoc)
+	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
+	 */
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO 自動生成されたメソッド・スタブ
+		super.onOptionsItemSelected(item);
+
+		switch (item.getItemId()) {
+		case R.id.course_info:
+			return false;
+		case R.id.player_info:
+			return false;
+		default:
+			return true;
+		}
+	}
+
+
 }
