@@ -9,7 +9,8 @@
             android:key="basic_hdcp"
             android:title="@string/pref_basic_hdcp" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/pref_using_clubs" >
+
+    <PreferenceScreen android:title="@string/pref_using_clubs" >
         <PreferenceCategory android:title="@string/pref_club_woods" >
             <CheckBoxPreference
                 android:defaultValue="true"
@@ -42,6 +43,6 @@
                 android:defaultValue="true"
                 android:key="pref_club_pt" />
         </PreferenceCategory>
-    </PreferenceCategory>
+    </PreferenceScreen>
 
 </PreferenceScreen>
