@@ -2,8 +2,17 @@
 
     <string name="app_name">Pocket Score Card</string>
     <string name="hello_world">Hello world!</string>
-    <string name="menu_settings">Settings</string>
+    <string name="player_info">Player Info.</string>
     <string name="title_activity_main_title">Main Title</string>
     <string name="play_cont">Play / Continue</string>
+    <string name="course_info">Add/Browse course</string>
+    <string name="pref_basic_info">Basic Information</string>
+    <string name="pref_using_clubs">Using Clubs</string>
+    <string name="pref_basic_player_name">Player Name</string>
+    <string name="pref_basic_hdcp">HDCP</string>
+    <string name="pref_club_woods">Woods</string>
+    <string name="pref_club_irons">Irons</string>
+    <string name="pref_club_wedges">Wedges</string>
+    <string name="pref_club_putter">Putter</string>
 
 </resources>
