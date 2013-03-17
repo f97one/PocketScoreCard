@@ -2,6 +2,7 @@ package net.formula97.android.pocket_score_card;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
@@ -26,16 +27,23 @@ public class MainTitleActivity extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// TODO 自動生成されたメソッド・スタブ
-		super.onOptionsItemSelected(item);
+
+		Intent i = null;
 
 		switch (item.getItemId()) {
 		case R.id.course_info:
-			return false;
+			break;
 		case R.id.player_info:
-			return false;
+			i = new Intent(this, PlayerInfoPreference.class);
+			break;
 		default:
-			return true;
+			break;
 		}
+
+		startActivity(i);
+
+		return super.onOptionsItemSelected(item);
+
 	}
 
 
