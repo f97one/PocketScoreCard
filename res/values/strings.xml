@@ -21,5 +21,6 @@
     <string name="clubname_6wood">6 wood</string>
     <string name="clubname_7wood">7 wood</string>
     <string name="pref_basic_player_info">Player Information</string>
+    <string name="txt_btn_add_course">Add Course data</string>
 
 </resources>

@@ -20,12 +20,15 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int btn_playcont=0x7f090000;
-        public static final int course_info=0x7f090002;
-        public static final int player_info=0x7f090001;
+        public static final int btn_addCourse=0x7f090000;
+        public static final int btn_playcont=0x7f090002;
+        public static final int course_info=0x7f090004;
+        public static final int lv_courseList=0x7f090001;
+        public static final int player_info=0x7f090003;
     }
     public static final class layout {
-        public static final int activity_main_title=0x7f030000;
+        public static final int activity_course_selection=0x7f030000;
+        public static final int activity_main_title=0x7f030001;
     }
     public static final class menu {
         public static final int activity_main_title=0x7f080000;
@@ -40,7 +43,7 @@ public final class R {
         public static final int clubname_7wood=0x7f060013;
         public static final int course_info=0x7f060005;
         public static final int hello_world=0x7f060001;
-        public static final int menu_settings=0x7f060015;
+        public static final int menu_settings=0x7f060016;
         public static final int play_cont=0x7f060004;
         public static final int player_info=0x7f060002;
         public static final int pref_basic_hdcp=0x7f060009;
@@ -53,6 +56,7 @@ public final class R {
         public static final int pref_club_woods=0x7f06000a;
         public static final int pref_using_clubs=0x7f060007;
         public static final int title_activity_main_title=0x7f060003;
+        public static final int txt_btn_add_course=0x7f060015;
     }
     public static final class style {
         public static final int AppTheme=0x7f070000;
