@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:key="POCKET_SCORE_CARD">
 
-    <PreferenceCategory android:title="@string/pref_basic_info" >
+    <PreferenceCategory android:title="@string/pref_basic_player_info" >
         <EditTextPreference
             android:key="basic_player_name"
             android:title="@string/pref_basic_player_name" />
@@ -9,50 +9,5 @@
             android:key="basic_hdcp"
             android:title="@string/pref_basic_hdcp" />
     </PreferenceCategory>
-
-    <PreferenceScreen android:title="@string/pref_using_clubs" >
-        <PreferenceCategory android:title="@string/pref_club_woods" >
-            <CheckBoxPreference
-                android:defaultValue="true"
-                android:key="pref_club_1w"
-                android:title="@string/clubname_1wood" />
-            <CheckBoxPreference
-                android:defaultValue="false"
-                android:key="pref_club_3w"
-                android:title="@string/clubname_3wood" />
-            <CheckBoxPreference
-                android:key="pref_club_4w"
-                android:title="@string/clubname_4wood" />
-            <CheckBoxPreference
-                android:key="pref_club_5w"
-                android:title="@string/clubname_5wood" />
-            <CheckBoxPreference
-                android:key="pref_club_6w"
-                android:title="@string/clubname_6wood" />
-            <CheckBoxPreference
-                android:key="pref_club_7w"
-                android:title="@string/clubname_7wood" />
-        </PreferenceCategory>
-        <PreferenceCategory android:title="@string/pref_club_irons" >
-            <CheckBoxPreference android:key="pref_club_3i" />
-            <CheckBoxPreference android:key="pref_club_4i" />
-            <CheckBoxPreference android:key="pref_club_5i" />
-            <CheckBoxPreference android:key="pref_club_6i" />
-            <CheckBoxPreference android:key="pref_club_7i" />
-            <CheckBoxPreference android:key="pref_club_8i" />
-            <CheckBoxPreference android:key="pref_club_9i" />
-        </PreferenceCategory>
-        <PreferenceCategory android:title="@string/pref_club_wedges" >
-            <CheckBoxPreference android:key="pref_club_pw" />
-            <CheckBoxPreference android:key="pref_club_aw" />
-            <CheckBoxPreference android:key="pref_club_sw" />
-            <CheckBoxPreference android:key="pref_club_lw" />
-        </PreferenceCategory>
-        <PreferenceCategory android:title="@string/pref_club_putter" >
-            <CheckBoxPreference
-                android:defaultValue="true"
-                android:key="pref_club_pt" />
-        </PreferenceCategory>
-    </PreferenceScreen>
 
 </PreferenceScreen>

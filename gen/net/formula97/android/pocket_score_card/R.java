@@ -40,11 +40,12 @@ public final class R {
         public static final int clubname_7wood=0x7f060013;
         public static final int course_info=0x7f060005;
         public static final int hello_world=0x7f060001;
-        public static final int menu_settings=0x7f060014;
+        public static final int menu_settings=0x7f060015;
         public static final int play_cont=0x7f060004;
         public static final int player_info=0x7f060002;
         public static final int pref_basic_hdcp=0x7f060009;
         public static final int pref_basic_info=0x7f060006;
+        public static final int pref_basic_player_info=0x7f060014;
         public static final int pref_basic_player_name=0x7f060008;
         public static final int pref_club_irons=0x7f06000b;
         public static final int pref_club_putter=0x7f06000d;
