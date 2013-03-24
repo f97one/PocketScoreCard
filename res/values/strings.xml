@@ -22,5 +22,28 @@
     <string name="clubname_7wood">7 wood</string>
     <string name="pref_basic_player_info">Player Information</string>
     <string name="txt_btn_add_course">Add Course data</string>
+    <string name="tv_label_course_name">Course Name</string>
+    <string name="txt_hint_course_name">Enter course name...</string>
+    <string name="tv_label_par">PAR</string>
+    <string name="tv_hole1">Hole 1</string>
+    <string name="tv_hole2">Hole 2</string>
+    <string name="tv_hole3">Hole 3</string>
+    <string name="tv_hole4">Hole 4</string>
+    <string name="tv_hole5">Hole 5</string>
+    <string name="tv_hole6">Hole 6</string>
+    <string name="tv_hole7">Hole 7</string>
+    <string name="tv_hole8">Hole 8</string>
+    <string name="tv_hole9">Hole 9</string>
+    <string name="tv_hole10">Hole 10</string>
+    <string name="tv_hole11">Hole 11</string>
+    <string name="tv_hole12">Hole 12</string>
+    <string name="tv_hole13">Hole 13</string>
+    <string name="tv_hole14">Hole 14</string>
+    <string name="tv_hole15">Hole 15</string>
+    <string name="tv_hole16">Hole 16</string>
+    <string name="tv_hole17">Hole 17</string>
+    <string name="tv_hole18">Hole 18</string>
+    <string name="txt_btn_submit">Submit</string>
+    <string name="tv_text_blank"></string>
 
 </resources>

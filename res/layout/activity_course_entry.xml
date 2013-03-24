@@ -1,7 +1,290 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-    
+
+    <Button
+        android:id="@+id/btn_submit_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/txt_btn_submit" />
+
+    <EditText
+        android:id="@+id/editText_courseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_submit_course"
+        android:ems="10"
+        android:hint="@string/txt_hint_course_name" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText_courseName"
+        android:layout_alignBottom="@+id/editText_courseName"
+        android:layout_alignParentLeft="true"
+        android:text="@string/tv_label_course_name" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editText_courseName"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:text="@string/pref_basic_hdcp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_toLeftOf="@+id/textView2"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="@string/tv_label_par" />
+
+    <Spinner
+        android:id="@+id/spinner_hdcp01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_toRightOf="@+id/textView3"
+        android:entries="@array/HdcpValue"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <Spinner
+        android:id="@+id/spinner_par01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignTop="@+id/spinner_hdcp01"
+        android:layout_toLeftOf="@+id/spinner_hdcp01"
+        android:entries="@array/ParValue"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <Spinner
+        android:id="@+id/spinner_hdcp02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/spinner_hdcp01"
+        android:layout_toRightOf="@+id/spinner_par01"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <Spinner
+        android:id="@+id/spinner_par02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner_par01"
+        android:layout_alignTop="@+id/spinner_hdcp02"
+        android:layout_toLeftOf="@+id/spinner_hdcp02"
+        android:entries="@array/ParValue"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/spinner_par02"
+        android:layout_alignBottom="@+id/spinner_par02"
+        android:layout_alignParentLeft="true"
+        android:text="@string/tv_hole2"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView3"
+        android:text="@string/tv_hole1"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/spinner_hdcp03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/spinner_hdcp02"
+        android:layout_toRightOf="@+id/spinner_par02"
+        android:entries="@array/HdcpValue"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <Spinner
+        android:id="@+id/spinner_par03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner_par02"
+        android:layout_alignRight="@+id/spinner_par02"
+        android:layout_alignTop="@+id/spinner_hdcp03"
+        android:entries="@array/ParValue"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/spinner_par03"
+        android:layout_alignBottom="@+id/spinner_par03"
+        android:layout_alignParentLeft="true"
+        android:text="@string/tv_hole3"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/spinner_hdcp04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner_hdcp03"
+        android:layout_below="@+id/spinner_hdcp03"
+        android:entries="@array/HdcpValue"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <Spinner
+        android:id="@+id/spinner_par04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner_par03"
+        android:layout_alignTop="@+id/spinner_hdcp04"
+        android:layout_toLeftOf="@+id/spinner_hdcp04"
+        android:entries="@array/ParValue"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/spinner_par04"
+        android:layout_alignBottom="@+id/spinner_par04"
+        android:layout_alignParentLeft="true"
+        android:text="@string/tv_hole4"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/spinner_hdc05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_hdcp04"
+        android:layout_toRightOf="@+id/spinner_par04"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <Spinner
+        android:id="@+id/spinner_par05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner_par04"
+        android:layout_alignTop="@+id/spinner_hdc05"
+        android:layout_toLeftOf="@+id/spinner_hdc05"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/spinner_par05"
+        android:layout_alignBottom="@+id/spinner_par05"
+        android:layout_alignParentLeft="true"
+        android:text="@string/tv_hole5"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/spinner_hdcp06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/spinner_hdc05"
+        android:layout_toRightOf="@+id/spinner_par05"
+        android:entries="@array/HdcpValue"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <Spinner
+        android:id="@+id/spinner_par06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner_par05"
+        android:layout_alignRight="@+id/spinner_par05"
+        android:layout_alignTop="@+id/spinner_hdcp06"
+        android:entries="@array/ParValue"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/spinner_par06"
+        android:layout_alignBottom="@+id/spinner_par06"
+        android:layout_alignParentLeft="true"
+        android:text="@string/tv_hole6"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/spinner_hdcp07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/spinner_hdcp06"
+        android:layout_toRightOf="@+id/spinner_par06"
+        android:entries="@array/HdcpValue"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <Spinner
+        android:id="@+id/spinner_par07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner_par06"
+        android:layout_alignTop="@+id/spinner_hdcp07"
+        android:layout_toLeftOf="@+id/spinner_hdcp07"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/spinner_par07"
+        android:layout_alignBottom="@+id/spinner_par07"
+        android:layout_alignParentLeft="true"
+        android:text="@string/tv_hole7"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/spinner_hdcp08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/spinner_hdcp07"
+        android:layout_toRightOf="@+id/spinner_par07"
+        android:entries="@array/HdcpValue"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <Spinner
+        android:id="@+id/spinner_par08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner_par07"
+        android:layout_alignRight="@+id/spinner_par07"
+        android:layout_alignTop="@+id/spinner_hdcp08"
+        android:entries="@array/ParValue"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/spinner_par08"
+        android:layout_alignBottom="@+id/spinner_par08"
+        android:layout_alignParentLeft="true"
+        android:text="@string/tv_hole8"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
