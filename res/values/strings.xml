@@ -8,7 +8,7 @@
     <string name="course_info">Add/Browse course</string>
     <string name="pref_basic_info">Basic Information</string>
     <string name="pref_using_clubs">Using Clubs</string>
-    <string name="pref_basic_player_name">Player Name</string>
+    <string name="pref_basic_owner_name">Owner Name</string>
     <string name="pref_basic_hdcp">HDCP</string>
     <string name="pref_club_woods">Woods</string>
     <string name="pref_club_irons">Irons</string>
@@ -20,7 +20,7 @@
     <string name="clubname_5wood">5 wood</string>
     <string name="clubname_6wood">6 wood</string>
     <string name="clubname_7wood">7 wood</string>
-    <string name="pref_basic_player_info">Player Information</string>
+    <string name="pref_basic_owner_info">Owner Information</string>
     <string name="txt_btn_add_course">Add Course data</string>
     <string name="tv_course_name">Course Name</string>
 
