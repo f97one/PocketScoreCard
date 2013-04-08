@@ -23,5 +23,7 @@
     <string name="pref_basic_owner_info">Owner Information</string>
     <string name="txt_btn_add_course">Add Course data</string>
     <string name="tv_course_name">Course Name</string>
+    <string name="tv_course_information">Course Information</string>
+    <string name="tv_hole_infomartion">Hole Information</string>
 
 </resources>

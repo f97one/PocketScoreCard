@@ -4,7 +4,7 @@
     android:layout_height="match_parent" >
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_courseInfomation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/editText_ownerHDCP"
@@ -64,8 +64,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/tv_usingClubs"
-        android:layout_marginTop="18dp" >
+        android:layout_below="@+id/tv_usingClubs" >
+
     </ListView>
 
 </RelativeLayout>
