@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:key="POCKET_SCORE_CARD">
 
-    <PreferenceCategory android:title="@string/pref_basic_player_info" >
+    <PreferenceCategory android:title="@string/pref_basic_owner_info" >
         <EditTextPreference
             android:key="basic_player_name"
-            android:title="@string/pref_basic_player_name" />
+            android:title="@string/pref_basic_owner_name" />
         <EditTextPreference
             android:key="basic_hdcp"
             android:title="@string/pref_basic_hdcp" />
