@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
+<<<<<<< HEAD
     <Button
         android:id="@+id/btn_submit_course"
         android:layout_width="wrap_content"
@@ -12,14 +13,22 @@
         android:layout_alignParentTop="true"
         android:text="@string/txt_btn_submit" />
 
+=======
+>>>>>>> 499bde7bab09e1191c2a9b279560d39bc8773ca6
     <EditText
         android:id="@+id/editText_courseName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
+<<<<<<< HEAD
         android:layout_below="@+id/btn_submit_course"
         android:ems="10"
         android:hint="@string/txt_hint_course_name" >
+=======
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="text" >
+>>>>>>> 499bde7bab09e1191c2a9b279560d39bc8773ca6
 
         <requestFocus />
     </EditText>
@@ -31,6 +40,7 @@
         android:layout_alignBaseline="@+id/editText_courseName"
         android:layout_alignBottom="@+id/editText_courseName"
         android:layout_alignParentLeft="true"
+<<<<<<< HEAD
         android:text="@string/tv_label_course_name" />
 
     <TextView
@@ -286,5 +296,17 @@
         android:layout_alignParentLeft="true"
         android:text="@string/tv_hole8"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+=======
+        android:text="@string/tv_course_name" />
+
+    <ListView
+        android:id="@+id/lv_courseData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editText_courseName" >
+
+    </ListView>
+>>>>>>> 499bde7bab09e1191c2a9b279560d39bc8773ca6
 
 </RelativeLayout>

@@ -24,6 +24,7 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
+<<<<<<< HEAD
         public static final int btn_addCourse=0x7f0a001d;
         public static final int btn_playcont=0x7f0a001f;
         public static final int btn_submit_course=0x7f0a0000;
@@ -58,6 +59,16 @@ public final class R {
         public static final int textView7=0x7f0a0010;
         public static final int textView8=0x7f0a0013;
         public static final int textView9=0x7f0a0016;
+=======
+        public static final int btn_addCourse=0x7f090003;
+        public static final int btn_playcont=0x7f090005;
+        public static final int course_info=0x7f090007;
+        public static final int editText_courseName=0x7f090000;
+        public static final int lv_courseData=0x7f090002;
+        public static final int lv_courseList=0x7f090004;
+        public static final int player_info=0x7f090006;
+        public static final int textView1=0x7f090001;
+>>>>>>> 499bde7bab09e1191c2a9b279560d39bc8773ca6
     }
     public static final class layout {
         public static final int activity_course_entry=0x7f030000;
@@ -68,6 +79,7 @@ public final class R {
         public static final int activity_main_title=0x7f090000;
     }
     public static final class string {
+<<<<<<< HEAD
         public static final int app_name=0x7f070000;
         public static final int clubname_1wood=0x7f07000e;
         public static final int clubname_3wood=0x7f07000f;
@@ -114,6 +126,32 @@ public final class R {
         public static final int txt_btn_add_course=0x7f070015;
         public static final int txt_btn_submit=0x7f07002b;
         public static final int txt_hint_course_name=0x7f070017;
+=======
+        public static final int app_name=0x7f060000;
+        public static final int clubname_1wood=0x7f06000e;
+        public static final int clubname_3wood=0x7f06000f;
+        public static final int clubname_4wood=0x7f060010;
+        public static final int clubname_5wood=0x7f060011;
+        public static final int clubname_6wood=0x7f060012;
+        public static final int clubname_7wood=0x7f060013;
+        public static final int course_info=0x7f060005;
+        public static final int hello_world=0x7f060001;
+        public static final int menu_settings=0x7f060017;
+        public static final int play_cont=0x7f060004;
+        public static final int player_info=0x7f060002;
+        public static final int pref_basic_hdcp=0x7f060009;
+        public static final int pref_basic_info=0x7f060006;
+        public static final int pref_basic_player_info=0x7f060014;
+        public static final int pref_basic_player_name=0x7f060008;
+        public static final int pref_club_irons=0x7f06000b;
+        public static final int pref_club_putter=0x7f06000d;
+        public static final int pref_club_wedges=0x7f06000c;
+        public static final int pref_club_woods=0x7f06000a;
+        public static final int pref_using_clubs=0x7f060007;
+        public static final int title_activity_main_title=0x7f060003;
+        public static final int tv_course_name=0x7f060016;
+        public static final int txt_btn_add_course=0x7f060015;
+>>>>>>> 499bde7bab09e1191c2a9b279560d39bc8773ca6
     }
     public static final class style {
         public static final int AppTheme=0x7f080000;

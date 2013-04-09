@@ -22,6 +22,7 @@
     <string name="clubname_7wood">7 wood</string>
     <string name="pref_basic_player_info">Player Information</string>
     <string name="txt_btn_add_course">Add Course data</string>
+<<<<<<< HEAD
     <string name="tv_label_course_name">Course Name</string>
     <string name="txt_hint_course_name">Enter course name...</string>
     <string name="tv_label_par">PAR</string>
@@ -45,5 +46,8 @@
     <string name="tv_hole18">Hole 18</string>
     <string name="txt_btn_submit">Submit</string>
     <string name="tv_text_blank"></string>
+=======
+    <string name="tv_course_name">Course Name</string>
+>>>>>>> 499bde7bab09e1191c2a9b279560d39bc8773ca6
 
 </resources>
