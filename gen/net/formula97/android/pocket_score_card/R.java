@@ -26,15 +26,16 @@ public final class R {
     public static final class id {
         public static final int btn_addCourse=0x7f0a0005;
         public static final int btn_playcont=0x7f0a0007;
-        public static final int course_info=0x7f0a0025;
+        public static final int course_info=0x7f0a0027;
         public static final int editText_courseName=0x7f0a0001;
+        public static final int editText_hdcpValue=0x7f0a0025;
         public static final int editText_ownerHDCP=0x7f0a0008;
         public static final int editText_ownerName=0x7f0a000a;
+        public static final int editText_parValue=0x7f0a0024;
         public static final int lv_courseData=0x7f0a0002;
         public static final int lv_courseList=0x7f0a0006;
-        public static final int player_info=0x7f0a0024;
-        public static final int spinner1=0x7f0a0023;
-        public static final int textView1=0x7f0a0000;
+        public static final int player_info=0x7f0a0026;
+        public static final int spinner_clubSettingType=0x7f0a0023;
         public static final int toggleButton_1w=0x7f0a000d;
         public static final int toggleButton_3i=0x7f0a0014;
         public static final int toggleButton_3w=0x7f0a000c;
@@ -58,9 +59,10 @@ public final class R {
         public static final int toggleButton_ut7=0x7f0a0011;
         public static final int toggleButton_ut9=0x7f0a0012;
         public static final int tv_clubSettingType=0x7f0a0022;
-        public static final int tv_courseInfomation=0x7f0a0004;
         public static final int tv_holeInformation=0x7f0a0003;
+        public static final int tv_ownerHdcp=0x7f0a0004;
         public static final int tv_ownerInfo=0x7f0a0009;
+        public static final int tv_ownerName=0x7f0a0000;
         public static final int tv_usingClubs=0x7f0a0021;
     }
     public static final class layout {

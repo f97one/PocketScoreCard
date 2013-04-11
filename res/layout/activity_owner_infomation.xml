@@ -5,7 +5,7 @@
     android:layout_height="match_parent" >
 
     <TextView
-        android:id="@+id/tv_courseInfomation"
+        android:id="@+id/tv_ownerHdcp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/editText_ownerHDCP"
@@ -22,16 +22,6 @@
         android:layout_alignParentTop="true"
         android:text="@string/pref_basic_owner_info"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/tv_ownerInfo"
-        android:layout_marginTop="19dp"
-        android:paddingLeft="10dp"
-        android:text="@string/pref_basic_owner_name" />
 
     <EditText
         android:id="@+id/editText_ownerName"
@@ -296,7 +286,7 @@
         android:text="@string/tv_club_setting_type" />
 
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/spinner_clubSettingType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -309,8 +299,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/spinner1"
+        android:layout_below="@+id/spinner_clubSettingType"
         android:text="@string/pref_using_clubs"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tv_ownerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText_ownerName"
+        android:layout_alignBottom="@+id/editText_ownerName"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="10dp"
+        android:text="@string/pref_basic_owner_name" />
 
 </RelativeLayout>
