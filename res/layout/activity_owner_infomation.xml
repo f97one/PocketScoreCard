@@ -59,13 +59,12 @@
         android:text="@string/pref_using_clubs"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <ListView
-        android:id="@+id/lv_usingClubsList"
-        android:layout_width="match_parent"
+    <ToggleButton
+        android:id="@+id/toggleButton_1w"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/tv_usingClubs" >
-
-    </ListView>
+        android:layout_below="@+id/tv_usingClubs"
+        android:text="ToggleButton" />
 
 </RelativeLayout>

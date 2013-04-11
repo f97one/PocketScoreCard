@@ -25,5 +25,15 @@
     <string name="tv_course_name">Course Name</string>
     <string name="tv_course_information">Course Information</string>
     <string name="tv_hole_infomartion">Hole Information</string>
+    <string name="txt_abbr_1w">1W</string>
+    <string name="txt_abbr_3w">3W</string>
+    <string name="txt_abbr_4w">4W</string>
+    <string name="txt_abbr_5w">5W</string>
+    <string name="txt_abbr_6w">6W</string>
+    <string name="txt_abbr_7w">7W</string>
+    <string name="txt_abbr_ut3">Ut3</string>
+    <string name="txt_abbr_ut5">Ut5</string>
+    <string name="txt_abbr_ut7">Ut7</string>
+    <string name="txt_abbr_1w">Ut9</string>
 
 </resources>
