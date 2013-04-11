@@ -66,6 +66,7 @@
         android:layout_alignBaseline="@+id/toggleButton_3w"
         android:layout_alignBottom="@+id/toggleButton_3w"
         android:layout_centerHorizontal="true"
+        android:checked="true"
         android:text="@string/txt_abbr_4w"
         android:textOff="@string/txt_abbr_4w"
         android:textOn="@string/txt_abbr_4w" />
@@ -119,6 +120,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/toggleButton_1w"
         android:layout_below="@+id/toggleButton_3w"
+        android:checked="true"
         android:text="@string/txt_abbr_7w"
         android:textOff="@string/txt_abbr_7w"
         android:textOn="@string/txt_abbr_7w" />
@@ -162,7 +164,59 @@
         android:layout_alignBottom="@+id/toggleButton_ut7"
         android:layout_alignLeft="@+id/toggleButton_6w"
         android:text="@string/txt_abbr_ut9"
-        android:textOff="@string/txt_abbr_ut7"
-        android:textOn="@string/txt_abbr_ut7" />
+        android:textOff="@string/txt_abbr_ut9"
+        android:textOn="@string/txt_abbr_ut9" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_3i"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/toggleButton_7w"
+        android:layout_below="@+id/toggleButton_7w"
+        android:text="@string/txt_abbr_3i"
+        android:textOff="@string/txt_abbr_3i"
+        android:textOn="@string/txt_abbr_3i" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_4i"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toggleButton_7w"
+        android:layout_toRightOf="@+id/toggleButton_7w"
+        android:text="@string/txt_abbr_4i"
+        android:textOff="@string/txt_abbr_4i"
+        android:textOn="@string/txt_abbr_4i" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_5i"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toggleButton_ut3"
+        android:layout_toRightOf="@+id/toggleButton_ut3"
+        android:checked="true"
+        android:text="@string/txt_abbr_5i"
+        android:textOff="@string/txt_abbr_5i"
+        android:textOn="@string/txt_abbr_5i" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_6i"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toggleButton_ut5"
+        android:layout_toRightOf="@+id/toggleButton_ut5"
+        android:text="@string/txt_abbr_6i"
+        android:textOff="@string/txt_abbr_6i"
+        android:textOn="@string/txt_abbr_6i" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_7i"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toggleButton_ut7"
+        android:layout_toRightOf="@+id/toggleButton_ut7"
+        android:checked="true"
+        android:text="@string/txt_abbr_7i"
+        android:textOff="@string/txt_abbr_7i"
+        android:textOn="@string/txt_abbr_7i" />
 
 </RelativeLayout>
