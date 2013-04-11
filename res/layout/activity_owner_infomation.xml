@@ -66,7 +66,6 @@
         android:layout_alignBaseline="@+id/toggleButton_3w"
         android:layout_alignBottom="@+id/toggleButton_3w"
         android:layout_centerHorizontal="true"
-        android:checked="true"
         android:text="@string/txt_abbr_4w"
         android:textOff="@string/txt_abbr_4w"
         android:textOn="@string/txt_abbr_4w" />
@@ -137,21 +136,12 @@
         android:textOn="@string/txt_abbr_ut3" />
 
     <ToggleButton
-        android:id="@+id/toggleButton_ut5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toggleButton_4w"
-        android:layout_toRightOf="@+id/toggleButton_3w"
-        android:text="@string/txt_abbr_ut5"
-        android:textOff="@string/txt_abbr_ut5"
-        android:textOn="@string/txt_abbr_ut5" />
-
-    <ToggleButton
         android:id="@+id/toggleButton_ut7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toggleButton_4w"
         android:layout_toRightOf="@+id/toggleButton_4w"
+        android:checked="true"
         android:text="@string/txt_abbr_ut7"
         android:textOff="@string/txt_abbr_ut7"
         android:textOn="@string/txt_abbr_ut7" />
@@ -188,17 +178,6 @@
         android:textOn="@string/txt_abbr_4i" />
 
     <ToggleButton
-        android:id="@+id/toggleButton_5i"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toggleButton_ut3"
-        android:layout_toRightOf="@+id/toggleButton_ut3"
-        android:checked="true"
-        android:text="@string/txt_abbr_5i"
-        android:textOff="@string/txt_abbr_5i"
-        android:textOn="@string/txt_abbr_5i" />
-
-    <ToggleButton
         android:id="@+id/toggleButton_6i"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -218,5 +197,101 @@
         android:text="@string/txt_abbr_7i"
         android:textOff="@string/txt_abbr_7i"
         android:textOn="@string/txt_abbr_7i" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_8i"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/toggleButton_3i"
+        android:layout_below="@+id/toggleButton_3i"
+        android:text="@string/txt_abbr_8i"
+        android:textOff="@string/txt_abbr_8i"
+        android:textOn="@string/txt_abbr_8i" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_9i"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toggleButton_3i"
+        android:layout_toRightOf="@+id/toggleButton_3i"
+        android:checked="true"
+        android:text="@string/txt_abbr_9i"
+        android:textOff="@string/txt_abbr_9i"
+        android:textOn="@string/txt_abbr_9i" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_aw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleButton_pw"
+        android:layout_alignBottom="@+id/toggleButton_pw"
+        android:layout_toRightOf="@+id/toggleButton_pw"
+        android:text="@string/txt_abbr_aw"
+        android:textOff="@string/txt_abbr_aw"
+        android:textOn="@string/txt_abbr_aw" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_pw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/toggleButton_8i"
+        android:layout_below="@+id/toggleButton_8i"
+        android:checked="true"
+        android:text="@string/txt_abbr_pw"
+        android:textOff="@string/txt_abbr_pw"
+        android:textOn="@string/txt_abbr_pw" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_lw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleButton_aw"
+        android:layout_alignBottom="@+id/toggleButton_aw"
+        android:layout_toRightOf="@+id/toggleButton_aw"
+        android:text="@string/txt_abbr_lw"
+        android:textOff="@string/txt_abbr_lw"
+        android:textOn="@string/txt_abbr_lw" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_5i"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toggleButton_ut3"
+        android:layout_toRightOf="@+id/toggleButton_ut3"
+        android:text="@string/txt_abbr_5i"
+        android:textOff="@string/txt_abbr_5i"
+        android:textOn="@string/txt_abbr_5i" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_ut5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toggleButton_4w"
+        android:layout_toRightOf="@+id/toggleButton_3w"
+        android:text="@string/txt_abbr_ut5"
+        android:textOff="@string/txt_abbr_ut5"
+        android:textOn="@string/txt_abbr_ut5" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_sw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/toggleButton_6i"
+        android:layout_below="@+id/toggleButton_9i"
+        android:checked="true"
+        android:text="@string/txt_abbr_sw"
+        android:textOff="@string/txt_abbr_sw"
+        android:textOn="@string/txt_abbr_sw" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/toggleButton_pw"
+        android:layout_below="@+id/toggleButton_aw"
+        android:checked="true"
+        android:text="@string/txt_abbr_pt"
+        android:textOff="@string/txt_abbr_pt"
+        android:textOn="@string/txt_abbr_pt" />
 
 </RelativeLayout>
