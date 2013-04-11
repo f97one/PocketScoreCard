@@ -35,5 +35,16 @@
     <string name="txt_abbr_ut5">Ut5</string>
     <string name="txt_abbr_ut7">Ut7</string>
     <string name="txt_abbr_1w">Ut9</string>
+    <string name="txt_abbr_3i">3I</string>
+    <string name="txt_abbr_4i">4I</string>
+    <string name="txt_abbr_5i">5I</string>
+    <string name="txt_abbr_6i">6I</string>
+    <string name="txt_abbr_7i">7I</string>
+    <string name="txt_abbr_8i">8I</string>
+    <string name="txt_abbr_9i">9I</string>
+    <string name="txt_abbr_pw">PW</string>
+    <string name="txt_abbr_aw">AW</string>
+    <string name="txt_abbr_sw">SW</string>
+    <string name="txt_abbr_lw">LB</string>
 
 </resources>
