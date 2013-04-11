@@ -60,11 +60,109 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ToggleButton
+        android:id="@+id/toggleButton_4w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleButton_3w"
+        android:layout_alignBottom="@+id/toggleButton_3w"
+        android:layout_centerHorizontal="true"
+        android:text="@string/txt_abbr_4w"
+        android:textOff="@string/txt_abbr_4w"
+        android:textOn="@string/txt_abbr_4w" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_3w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleButton_1w"
+        android:layout_alignBottom="@+id/toggleButton_1w"
+        android:layout_toLeftOf="@+id/toggleButton_4w"
+        android:text="@string/txt_abbr_3w"
+        android:textOff="@string/txt_abbr_3w"
+        android:textOn="@string/txt_abbr_3w" />
+
+    <ToggleButton
         android:id="@+id/toggleButton_1w"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/tv_usingClubs"
-        android:text="ToggleButton" />
+        android:layout_toLeftOf="@+id/toggleButton_3w"
+        android:checked="true"
+        android:text="@string/txt_abbr_1w"
+        android:textOff="@string/txt_abbr_1w"
+        android:textOn="@string/txt_abbr_1w" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_6w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_usingClubs"
+        android:layout_toRightOf="@+id/toggleButton_5w"
+        android:text="@string/txt_abbr_6w"
+        android:textOff="@string/txt_abbr_6w"
+        android:textOn="@string/txt_abbr_6w" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_5w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleButton_4w"
+        android:layout_alignBottom="@+id/toggleButton_4w"
+        android:layout_toRightOf="@+id/toggleButton_4w"
+        android:text="@string/txt_abbr_5w"
+        android:textOff="@string/txt_abbr_5w"
+        android:textOn="@string/txt_abbr_5w" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_7w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/toggleButton_1w"
+        android:layout_below="@+id/toggleButton_3w"
+        android:text="@string/txt_abbr_7w"
+        android:textOff="@string/txt_abbr_7w"
+        android:textOn="@string/txt_abbr_7w" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_ut3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleButton_7w"
+        android:layout_alignBottom="@+id/toggleButton_7w"
+        android:layout_alignLeft="@+id/toggleButton_3w"
+        android:text="@string/txt_abbr_ut3"
+        android:textOff="@string/txt_abbr_ut3"
+        android:textOn="@string/txt_abbr_ut3" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_ut5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toggleButton_4w"
+        android:layout_toRightOf="@+id/toggleButton_3w"
+        android:text="@string/txt_abbr_ut5"
+        android:textOff="@string/txt_abbr_ut5"
+        android:textOn="@string/txt_abbr_ut5" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_ut7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toggleButton_4w"
+        android:layout_toRightOf="@+id/toggleButton_4w"
+        android:text="@string/txt_abbr_ut7"
+        android:textOff="@string/txt_abbr_ut7"
+        android:textOn="@string/txt_abbr_ut7" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_ut9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleButton_ut7"
+        android:layout_alignBottom="@+id/toggleButton_ut7"
+        android:layout_alignLeft="@+id/toggleButton_6w"
+        android:text="@string/txt_abbr_ut9"
+        android:textOff="@string/txt_abbr_ut7"
+        android:textOn="@string/txt_abbr_ut7" />
 
 </RelativeLayout>
