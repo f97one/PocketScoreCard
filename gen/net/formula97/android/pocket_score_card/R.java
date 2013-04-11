@@ -26,14 +26,13 @@ public final class R {
     public static final class id {
         public static final int btn_addCourse=0x7f0a0005;
         public static final int btn_playcont=0x7f0a0007;
-        public static final int checkedTV_clubName=0x7f0a0024;
-        public static final int course_info=0x7f0a0026;
+        public static final int course_info=0x7f0a0025;
         public static final int editText_courseName=0x7f0a0001;
         public static final int editText_ownerHDCP=0x7f0a0008;
         public static final int editText_ownerName=0x7f0a000a;
         public static final int lv_courseData=0x7f0a0002;
         public static final int lv_courseList=0x7f0a0006;
-        public static final int player_info=0x7f0a0025;
+        public static final int player_info=0x7f0a0024;
         public static final int spinner1=0x7f0a0023;
         public static final int textView1=0x7f0a0000;
         public static final int toggleButton_1w=0x7f0a000d;
@@ -69,8 +68,7 @@ public final class R {
         public static final int activity_course_selection=0x7f030001;
         public static final int activity_main_title=0x7f030002;
         public static final int activity_owner_infomation=0x7f030003;
-        public static final int lv_element_club_list=0x7f030004;
-        public static final int lv_element_hole_list=0x7f030005;
+        public static final int lv_element_hole_list=0x7f030004;
     }
     public static final class menu {
         public static final int activity_main_title=0x7f090000;
