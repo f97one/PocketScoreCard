@@ -71,7 +71,7 @@ public final class R {
         public static final int clubname_7wood=0x7f070013;
         public static final int course_info=0x7f070005;
         public static final int hello_world=0x7f070001;
-        public static final int menu_settings=0x7f07002e;
+        public static final int menu_settings=0x7f07002f;
         public static final int play_cont=0x7f070004;
         public static final int player_info=0x7f070002;
         public static final int pref_basic_hdcp=0x7f070009;
@@ -102,6 +102,7 @@ public final class R {
         public static final int txt_abbr_9i=0x7f070029;
         public static final int txt_abbr_aw=0x7f07002b;
         public static final int txt_abbr_lw=0x7f07002d;
+        public static final int txt_abbr_pt=0x7f07002e;
         public static final int txt_abbr_pw=0x7f07002a;
         public static final int txt_abbr_sw=0x7f07002c;
         public static final int txt_abbr_ut3=0x7f07001f;
