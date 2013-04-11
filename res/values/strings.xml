@@ -47,5 +47,6 @@
     <string name="txt_abbr_sw">SW</string>
     <string name="txt_abbr_lw">LW</string>
     <string name="txt_abbr_pt">PT</string>
+    <string name="tv_club_setting_type">Club Setting type</string>
 
 </resources>

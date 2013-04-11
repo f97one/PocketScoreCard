@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
@@ -50,15 +51,6 @@
         android:ems="10"
         android:inputType="number|numberDecimal" />
 
-    <TextView
-        android:id="@+id/tv_usingClubs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/editText_ownerHDCP"
-        android:text="@string/pref_using_clubs"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <ToggleButton
         android:id="@+id/toggleButton_4w"
         android:layout_width="wrap_content"
@@ -80,27 +72,6 @@
         android:text="@string/txt_abbr_3w"
         android:textOff="@string/txt_abbr_3w"
         android:textOn="@string/txt_abbr_3w" />
-
-    <ToggleButton
-        android:id="@+id/toggleButton_1w"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_usingClubs"
-        android:layout_toLeftOf="@+id/toggleButton_3w"
-        android:checked="true"
-        android:text="@string/txt_abbr_1w"
-        android:textOff="@string/txt_abbr_1w"
-        android:textOn="@string/txt_abbr_1w" />
-
-    <ToggleButton
-        android:id="@+id/toggleButton_6w"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_usingClubs"
-        android:layout_toRightOf="@+id/toggleButton_5w"
-        android:text="@string/txt_abbr_6w"
-        android:textOff="@string/txt_abbr_6w"
-        android:textOn="@string/txt_abbr_6w" />
 
     <ToggleButton
         android:id="@+id/toggleButton_5w"
@@ -293,5 +264,53 @@
         android:text="@string/txt_abbr_pt"
         android:textOff="@string/txt_abbr_pt"
         android:textOn="@string/txt_abbr_pt" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_6w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/toggleButton_ut9"
+        android:layout_alignLeft="@+id/toggleButton_7i"
+        android:text="@string/txt_abbr_6w"
+        android:textOff="@string/txt_abbr_6w"
+        android:textOn="@string/txt_abbr_6w" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_1w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_usingClubs"
+        android:layout_toLeftOf="@+id/toggleButton_ut3"
+        android:checked="true"
+        android:text="@string/txt_abbr_1w"
+        android:textOff="@string/txt_abbr_1w"
+        android:textOn="@string/txt_abbr_1w" />
+
+    <TextView
+        android:id="@+id/tv_clubSettingType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editText_ownerHDCP"
+        android:paddingLeft="10dp"
+        android:text="@string/tv_club_setting_type" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_clubSettingType"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <TextView
+        android:id="@+id/tv_usingClubs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinner1"
+        android:text="@string/pref_using_clubs"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
