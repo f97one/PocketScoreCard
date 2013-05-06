@@ -18,4 +18,8 @@ public final class AppConstants {
 		public static final String CLIENT_SECRET = "4z9cLR-Y3YPKv0yPedcKbgErF5a9SmDs";
 	}
 
+	// Google APIで使用するパラメータ類
+//	public static final class Google {
+//
+//	}
 }
