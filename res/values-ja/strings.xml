@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">Pocket Score Card</string>
-    <string name="hello_world">Hello world!</string>
     <string name="menu_settings">設定</string>
     <string name="title_activity_main_title">メインタイトル</string>
 
