@@ -6,6 +6,7 @@ import org.androidannotations.annotations.ViewById;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -74,16 +75,41 @@ public class MainTitleActivity extends Activity implements OnClickListener {
 		switch (arg0.getId()) {
 		case R.id.btn_playcont:
 			// TODO プレイ／続行ボタンを押したときの処理を書く
+			btn_playcont_Click();
 			break;
 		case R.id.btn_add_browse_course:
 			// TODO コース情報表示ボタンを押したときの処理を書く
+			btn_add_browse_course_Click();
 			break;
 		case R.id.btn_player_info:
 			// TODO プレイヤー情報を表示する
+			btn_player_info_Click();
 			break;
 		default:
+			Log.d("MainTitleActivity#onClik", "nothing to operate");
 			break;
 		}
+	}
+
+	/**
+	 * プレイヤー情報表示ボタンを押したときの処理。
+	 */
+	private void btn_player_info_Click() {
+		Log.d("MainTitleActivity#onClik", "Player info. button clicked.");
+	}
+
+	/**
+	 * コース情報表示ボタンを押したときの処理。
+	 */
+	private void btn_add_browse_course_Click() {
+		Log.d("MainTitleActivity#onClik", "Add/Browse course button clicked.");
+	}
+
+	/**
+	 * プレイ／再開ボタンを押したときの処理。
+	 */
+	private void btn_playcont_Click() {
+		Log.d("MainTitleActivity#onClik", "Play/Cont button clicked.");
 	}
 
 	/* (non-Javadoc)
@@ -102,6 +128,10 @@ public class MainTitleActivity extends Activity implements OnClickListener {
 	protected void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
+		
+		btn_playcont.setOnClickListener(this);
+		btn_add_browse_course.setOnClickListener(this);
+		btn_player_info.setOnClickListener(this);
 	}
 
 
