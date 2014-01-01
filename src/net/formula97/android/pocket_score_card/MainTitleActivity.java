@@ -91,6 +91,9 @@ public class MainTitleActivity extends Activity implements OnClickListener {
 	 */
 	private void btn_player_info_Click() {
 		Log.d("MainTitleActivity#btn_player_info_Click", "Player info. button clicked.");
+		
+		Intent i = new Intent(this, PlayerInfoPreference.class);
+		startActivity(i);
 	}
 
 	/**
