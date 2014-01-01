@@ -1,4 +1,2 @@
-PockertScoreCard
+PocketScoreCard
 ================
-
-オフライン運用できるゴルフ用スコアカード管理アプリ
