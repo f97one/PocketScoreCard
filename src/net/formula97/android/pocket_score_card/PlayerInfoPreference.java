@@ -29,4 +29,29 @@ public class PlayerInfoPreference extends Activity {
 		setContentView(R.layout.activity_owner_infomation);
 	}
 
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onPause()
+	 */
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+	}
+
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onResume()
+	 */
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+	}
+
+	private void loadFromPreference() {
+		
+	}
+	
+	private void saveToPrefence() {
+		
+	}
 }
