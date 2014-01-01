@@ -3,14 +3,14 @@
  */
 package net.formula97.android.pocket_score_card;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
 
 /**
  * @author kazutoshi
  *
  */
-public class PlayerInfoPreference extends PreferenceActivity {
+public class PlayerInfoPreference extends Activity {
 
 	/**
 	 *
@@ -26,7 +26,7 @@ public class PlayerInfoPreference extends PreferenceActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO 自動生成されたメソッド・スタブ
 		super.onCreate(savedInstanceState);
-		addPreferencesFromResource(R.xml.player_info);
+		setContentView(R.layout.activity_owner_infomation);
 	}
 
 }
