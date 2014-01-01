@@ -14,6 +14,7 @@ public final class ProjConstants {
 		public static final String CLUB_4W = "Club4W";
 		public static final String CLUB_5W = "Club5W";
 		public static final String CLUB_6W = "Club6W";
+		public static final String CLUB_7W = "Club7W";
 		public static final String CLUB_UT3 = "ClubUt3";
 		public static final String CLUB_UT5 = "ClubUt5";
 		public static final String CLUB_UT7 = "ClubTu7";
