@@ -46,21 +46,16 @@ public class MainTitleActivity extends Activity implements OnClickListener {
 	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO 自動生成されたメソッド・スタブ
-
-		Intent i = null;
-
 		switch (item.getItemId()) {
 		case R.id.course_info:
+			btn_add_browse_course_Click();
 			break;
 		case R.id.player_info:
-			i = new Intent(this, PlayerInfoPreference.class);
+			btn_player_info_Click();
 			break;
 		default:
 			break;
 		}
-
-		startActivity(i);
 
 		return super.onOptionsItemSelected(item);
 
@@ -95,21 +90,21 @@ public class MainTitleActivity extends Activity implements OnClickListener {
 	 * プレイヤー情報表示ボタンを押したときの処理。
 	 */
 	private void btn_player_info_Click() {
-		Log.d("MainTitleActivity#onClik", "Player info. button clicked.");
+		Log.d("MainTitleActivity#btn_player_info_Click", "Player info. button clicked.");
 	}
 
 	/**
 	 * コース情報表示ボタンを押したときの処理。
 	 */
 	private void btn_add_browse_course_Click() {
-		Log.d("MainTitleActivity#onClik", "Add/Browse course button clicked.");
+		Log.d("MainTitleActivity#btn_add_browse_course_Click", "Add/Browse course button clicked.");
 	}
 
 	/**
 	 * プレイ／再開ボタンを押したときの処理。
 	 */
 	private void btn_playcont_Click() {
-		Log.d("MainTitleActivity#onClik", "Play/Cont button clicked.");
+		Log.d("MainTitleActivity#btn_playcont_Click", "Play/Cont button clicked.");
 	}
 
 	/* (non-Javadoc)
