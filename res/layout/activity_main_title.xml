@@ -11,4 +11,25 @@
         android:layout_centerVertical="true"
         android:text="@string/play_cont" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_playcont"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp" >
+
+        <Button
+            android:id="@+id/btn_add_browse_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/course_info" />
+
+        <Button
+            android:id="@+id/btn_player_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player_info" />
+
+    </LinearLayout>
+
 </RelativeLayout>
