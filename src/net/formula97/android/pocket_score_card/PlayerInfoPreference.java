@@ -6,6 +6,9 @@ package net.formula97.android.pocket_score_card;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.ToggleButton;
@@ -14,7 +17,7 @@ import android.widget.ToggleButton;
  * @author kazutoshi
  *
  */
-public class PlayerInfoPreference extends Activity {
+public class PlayerInfoPreference extends Activity implements OnItemSelectedListener {
 
 	SharedPreferences sp;
 	
@@ -45,7 +48,7 @@ public class PlayerInfoPreference extends Activity {
 	ToggleButton toggleButton_pt;
 
 	/**
-	 *
+	 * 自動生成されたコンストラクタ。Activityなので特に何もしない。
 	 */
 	public PlayerInfoPreference() {
 		// TODO 自動生成されたコンストラクター・スタブ
@@ -107,6 +110,12 @@ public class PlayerInfoPreference extends Activity {
 	protected void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
+		
+		// スピナーの選択イベントリスナーを定義
+		spinner_clubSettingType.setOnItemSelectedListener(this);
+		
+		// プリファレンスの復元
+		loadPlayerDataFromPreference();
 	}
 
 	/**
@@ -149,7 +158,15 @@ public class PlayerInfoPreference extends Activity {
 	 * プリファレンスへプレイヤー情報を保存する。
 	 */
 	private void savePlayerDataToPrefence() {
+		SharedPreferences.Editor editor = sp.edit();
 		
+		// 名前とHDCPの格納
+		editor.putString(ProjConstants.Prefs.PLAYER_NAME, editText_ownerName.getText().toString());
+		editor.putInt(ProjConstants.Prefs.PLAYER_HDCP, Integer.parseInt(editText_ownerHDCP.getText().toString()));
+		
+		// TODO Spinnerの値を保存する処理を書く
+		
+		editor.commit();
 	}
 	
 	/**
@@ -167,6 +184,25 @@ public class PlayerInfoPreference extends Activity {
 	 * @param settingTypeIndex int型、所有情報をひもづけるクラブセッティングID
 	 */
 	private void saveClubSettingArray(int settingTypeIndex) {
+		
+	}
+
+	/* (non-Javadoc)
+	 * @see android.widget.AdapterView.OnItemSelectedListener#onItemSelected(android.widget.AdapterView, android.view.View, int, long)
+	 */
+	@Override
+	public void onItemSelected(AdapterView<?> parent, View view, int position,
+			long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/* (non-Javadoc)
+	 * @see android.widget.AdapterView.OnItemSelectedListener#onNothingSelected(android.widget.AdapterView)
+	 */
+	@Override
+	public void onNothingSelected(AdapterView<?> parent) {
+		// TODO Auto-generated method stub
 		
 	}
 }
