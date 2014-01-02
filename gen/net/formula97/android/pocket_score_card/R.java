@@ -11,6 +11,7 @@ public final class R {
     public static final class array {
         public static final int HdcpValue=0x7f060000;
         public static final int ParValue=0x7f060001;
+        public static final int spinner_setting_types=0x7f060002;
     }
     public static final class attr {
     }
@@ -24,46 +25,49 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
+        public static final int adView=0x7f0a000a;
         public static final int btn_addCourse=0x7f0a0005;
+        public static final int btn_add_browse_course=0x7f0a0008;
         public static final int btn_playcont=0x7f0a0007;
-        public static final int course_info=0x7f0a0027;
+        public static final int btn_player_info=0x7f0a0009;
+        public static final int course_info=0x7f0a002a;
         public static final int editText_courseName=0x7f0a0001;
-        public static final int editText_hdcpValue=0x7f0a0025;
-        public static final int editText_ownerHDCP=0x7f0a0008;
-        public static final int editText_ownerName=0x7f0a000a;
-        public static final int editText_parValue=0x7f0a0024;
+        public static final int editText_hdcpValue=0x7f0a0028;
+        public static final int editText_ownerHDCP=0x7f0a000b;
+        public static final int editText_ownerName=0x7f0a000d;
+        public static final int editText_parValue=0x7f0a0027;
         public static final int lv_courseData=0x7f0a0002;
         public static final int lv_courseList=0x7f0a0006;
-        public static final int player_info=0x7f0a0026;
-        public static final int spinner_clubSettingType=0x7f0a0023;
-        public static final int toggleButton_1w=0x7f0a000d;
-        public static final int toggleButton_3i=0x7f0a0014;
-        public static final int toggleButton_3w=0x7f0a000c;
-        public static final int toggleButton_4i=0x7f0a0015;
-        public static final int toggleButton_4w=0x7f0a000b;
-        public static final int toggleButton_5i=0x7f0a001e;
-        public static final int toggleButton_5w=0x7f0a000e;
-        public static final int toggleButton_6i=0x7f0a0016;
-        public static final int toggleButton_6w=0x7f0a0013;
-        public static final int toggleButton_7i=0x7f0a0018;
-        public static final int toggleButton_7w=0x7f0a000f;
-        public static final int toggleButton_8i=0x7f0a0019;
-        public static final int toggleButton_9i=0x7f0a001a;
-        public static final int toggleButton_aw=0x7f0a001b;
-        public static final int toggleButton_lw=0x7f0a001d;
-        public static final int toggleButton_pt=0x7f0a0020;
-        public static final int toggleButton_pw=0x7f0a001c;
-        public static final int toggleButton_sw=0x7f0a001f;
-        public static final int toggleButton_ut3=0x7f0a0010;
-        public static final int toggleButton_ut5=0x7f0a0017;
-        public static final int toggleButton_ut7=0x7f0a0011;
-        public static final int toggleButton_ut9=0x7f0a0012;
-        public static final int tv_clubSettingType=0x7f0a0022;
+        public static final int player_info=0x7f0a0029;
+        public static final int spinner_clubSettingType=0x7f0a0026;
+        public static final int toggleButton_1w=0x7f0a0010;
+        public static final int toggleButton_3i=0x7f0a0017;
+        public static final int toggleButton_3w=0x7f0a000f;
+        public static final int toggleButton_4i=0x7f0a0018;
+        public static final int toggleButton_4w=0x7f0a000e;
+        public static final int toggleButton_5i=0x7f0a0021;
+        public static final int toggleButton_5w=0x7f0a0011;
+        public static final int toggleButton_6i=0x7f0a0019;
+        public static final int toggleButton_6w=0x7f0a0016;
+        public static final int toggleButton_7i=0x7f0a001b;
+        public static final int toggleButton_7w=0x7f0a0012;
+        public static final int toggleButton_8i=0x7f0a001c;
+        public static final int toggleButton_9i=0x7f0a001d;
+        public static final int toggleButton_aw=0x7f0a001e;
+        public static final int toggleButton_lw=0x7f0a0020;
+        public static final int toggleButton_pt=0x7f0a0023;
+        public static final int toggleButton_pw=0x7f0a001f;
+        public static final int toggleButton_sw=0x7f0a0022;
+        public static final int toggleButton_ut3=0x7f0a0013;
+        public static final int toggleButton_ut5=0x7f0a001a;
+        public static final int toggleButton_ut7=0x7f0a0014;
+        public static final int toggleButton_ut9=0x7f0a0015;
+        public static final int tv_clubSettingType=0x7f0a0025;
         public static final int tv_holeInformation=0x7f0a0003;
         public static final int tv_ownerHdcp=0x7f0a0004;
-        public static final int tv_ownerInfo=0x7f0a0009;
+        public static final int tv_ownerInfo=0x7f0a000c;
         public static final int tv_ownerName=0x7f0a0000;
-        public static final int tv_usingClubs=0x7f0a0021;
+        public static final int tv_usingClubs=0x7f0a0024;
     }
     public static final class layout {
         public static final int activity_course_entry=0x7f030000;
@@ -84,7 +88,7 @@ public final class R {
         public static final int clubname_6wood=0x7f070011;
         public static final int clubname_7wood=0x7f070012;
         public static final int course_info=0x7f070004;
-        public static final int menu_settings=0x7f07002f;
+        public static final int menu_settings=0x7f070032;
         public static final int play_cont=0x7f070003;
         public static final int player_info=0x7f070001;
         public static final int pref_basic_hdcp=0x7f070008;
@@ -96,6 +100,9 @@ public final class R {
         public static final int pref_club_wedges=0x7f07000b;
         public static final int pref_club_woods=0x7f070009;
         public static final int pref_using_clubs=0x7f070006;
+        public static final int sp_setting_type_1=0x7f07002f;
+        public static final int sp_setting_type_2=0x7f070030;
+        public static final int sp_setting_type_3=0x7f070031;
         public static final int title_activity_main_title=0x7f070002;
         public static final int tv_club_setting_type=0x7f07002e;
         public static final int tv_course_information=0x7f070016;

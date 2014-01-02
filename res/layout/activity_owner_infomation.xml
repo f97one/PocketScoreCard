@@ -292,6 +292,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/tv_clubSettingType"
+        android:entries="@array/spinner_setting_types"
         tools:listitem="@android:layout/simple_spinner_item" />
 
     <TextView

@@ -47,5 +47,8 @@
     <string name="txt_abbr_lw">LW</string>
     <string name="txt_abbr_pt">PT</string>
     <string name="tv_club_setting_type">Club Setting type</string>
+    <string name="sp_setting_type_1">Setting type 1</string>
+    <string name="sp_setting_type_2">Setting type 2</string>
+    <string name="sp_setting_type_3">Setting type 3</string>
 
 </resources>
