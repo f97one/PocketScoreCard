@@ -123,8 +123,9 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 	 */
 	private void loadPlayerDataFromPreference() {
 		editText_ownerName.setText(sp.getString(ProjConstants.Prefs.PREF_NAME, ""));
-		editText_ownerHDCP.setText(String.valueOf(sp.getInt(ProjConstants.Prefs.PLAYER_HDCP, 0)));
+		editText_ownerHDCP.setText(String.valueOf(sp.getInt(ProjConstants.Prefs.PLAYER_HDCP, 0)));	// 初期値は0とする
 		// TODO Spinnerへの値セットを実装する
+		spinner_clubSettingType.setSelection(sp.getInt(ProjConstants.Prefs.CLUB_SETTING_TYPE, 0));	// 初期値は0とする
 		
 		// 所有クラブのセッティングをリストア
 		//   以下のクラブはデフォルトで所有しているものとする。
@@ -165,6 +166,9 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 		editor.putInt(ProjConstants.Prefs.PLAYER_HDCP, Integer.parseInt(editText_ownerHDCP.getText().toString()));
 		
 		// TODO Spinnerの値を保存する処理を書く
+		int position = spinner_clubSettingType.getSelectedItemPosition();
+		editor.putInt(ProjConstants.Prefs.CLUB_SETTING_TYPE, position);
+		saveClubSettingArray(position);
 		
 		editor.commit();
 	}
@@ -203,6 +207,7 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 	@Override
 	public void onNothingSelected(AdapterView<?> parent) {
 		// TODO Auto-generated method stub
+		// 初期値をセット
 		
 	}
 }
