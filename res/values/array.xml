@@ -5,5 +5,11 @@
         <item >@string/sp_setting_type_2</item>
         <item >@string/sp_setting_type_3</item>
     </string-array>
+
+    <string-array name="ParValue">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
     
 </resources>

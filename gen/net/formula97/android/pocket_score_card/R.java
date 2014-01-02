@@ -9,8 +9,8 @@ package net.formula97.android.pocket_score_card;
 
 public final class R {
     public static final class array {
-        public static final int HdcpValue=0x7f050001;
-        public static final int ParValue=0x7f050002;
+        public static final int HdcpValue=0x7f050002;
+        public static final int ParValue=0x7f050001;
         public static final int spinner_setting_types=0x7f050000;
     }
     public static final class attr {
