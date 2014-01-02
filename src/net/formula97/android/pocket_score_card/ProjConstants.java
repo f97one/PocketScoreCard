@@ -36,4 +36,14 @@ public final class ProjConstants {
 		public static final String CLUB_PT = "ClubPt";
 		
 	}
+	
+	public final class DB {
+		public static final String DBNAME = "PocketScoreCard.db";
+		public static final String TABLE_CLUB_SETTINGS = "CLUB_SETTINGS";
+		public static final String TABLE_COURSE_DATA = "COURSE_DATA";
+		public static final String TABLE_COURSE_DETAILS = "COURSE_DETAILS";
+		public static final String TABLE_PLAY_RESULTS = "PLAY_RESULTS";
+		public static final int CURRENT_DB_VERSION = 1;
+		public static final int OLDER_DB_VERSION = 1;
+	}
 }
