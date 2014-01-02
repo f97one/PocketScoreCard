@@ -87,7 +87,7 @@ public final class R {
         public static final int clubname_6wood=0x7f070011;
         public static final int clubname_7wood=0x7f070012;
         public static final int course_info=0x7f070004;
-        public static final int menu_settings=0x7f07002f;
+        public static final int menu_settings=0x7f070032;
         public static final int play_cont=0x7f070003;
         public static final int player_info=0x7f070001;
         public static final int pref_basic_hdcp=0x7f070008;
@@ -99,6 +99,9 @@ public final class R {
         public static final int pref_club_wedges=0x7f07000b;
         public static final int pref_club_woods=0x7f070009;
         public static final int pref_using_clubs=0x7f070006;
+        public static final int sp_setting_type_1=0x7f07002f;
+        public static final int sp_setting_type_2=0x7f070030;
+        public static final int sp_setting_type_3=0x7f070031;
         public static final int title_activity_main_title=0x7f070002;
         public static final int tv_club_setting_type=0x7f07002e;
         public static final int tv_course_information=0x7f070016;
