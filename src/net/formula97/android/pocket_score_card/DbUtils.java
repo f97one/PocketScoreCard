@@ -5,6 +5,7 @@ package net.formula97.android.pocket_score_card;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
@@ -27,6 +28,7 @@ public class DbUtils extends SQLiteOpenHelper {
 	
 	/**
 	 * API Level 10のコンストラクタ。基本的にこちらを使う。
+	 * dbファイルがなかったら勝手に作るので、スーパークラスのコンストラクタを呼ぶだけ。
 	 * @param context
 	 * @param name
 	 * @param factory
@@ -39,6 +41,7 @@ public class DbUtils extends SQLiteOpenHelper {
 
 	/**
 	 * API Level 11以上のコンストラクタ。SQLiteのエラーハンドラAPIが利用できる。
+	 * dbファイルがなかったら勝手に作るので、スーパークラスのコンストラクタを呼ぶだけ。
 	 * @param context
 	 * @param name
 	 * @param factory
@@ -56,7 +59,8 @@ public class DbUtils extends SQLiteOpenHelper {
 	 */
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		// TODO Auto-generated method stub
+		// テーブルの作成
+		db.execSQL(CREATE_CLUB_SETTINGS);
 
 	}
 
@@ -69,4 +73,23 @@ public class DbUtils extends SQLiteOpenHelper {
 
 	}
 
+	/**
+	 * クラブセッティングIDに応じたクラブ名と使用フラグを返す。
+	 * @param db SQLiteDatabase型、操作するDBインスタンス
+	 * @param clubSettingId int型、取得するクラブセッティングID
+	 * @return Cursor型、DBから取得した「クラブ名,使用フラグ（0=使用しない, 1=使用する）」の順の連想配列(みたいなもの)
+	 */
+	public Cursor getClubSettings(SQLiteDatabase db, int clubSettingId) {
+		String table = ProjConstants.DB.TABLE_CLUB_SETTINGS;
+		String[] columns = {"CLUB_NAME", "USING"};
+		String selection = "SETTING_TYPE_ID = ?";
+		String[] selectionArgs = {String.valueOf(clubSettingId)};
+		String groupBy = null;
+		String having = null;
+		String orderBy = "CLUB_NAME";
+		
+		Cursor q = db.query(table, columns, selection, selectionArgs, groupBy, having, orderBy);
+		q.moveToFirst();
+		return q;
+	}
 }
