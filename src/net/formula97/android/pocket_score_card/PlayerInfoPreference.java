@@ -46,6 +46,8 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 	ToggleButton toggleButton_lw;
 	ToggleButton toggleButton_sw;
 	ToggleButton toggleButton_pt;
+	
+	ToggleButton[] btns; 
 
 	/**
 	 * 自動生成されたコンストラクタ。Activityなので特に何もしない。
@@ -92,6 +94,9 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 		toggleButton_lw = (ToggleButton)findViewById(R.id.toggleButton_lw);
 		toggleButton_sw = (ToggleButton)findViewById(R.id.toggleButton_sw);
 		toggleButton_pt = (ToggleButton)findViewById(R.id.toggleButton_pt);
+		
+		// ToggleButtonの配列を作る
+		btns = getToggleButtonsArray();
 	}
 
 	/* (non-Javadoc)
@@ -209,6 +214,39 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 		// TODO Auto-generated method stub
 		// 初期値をセット
 		
+	}
+	
+	/**
+	 * Activityに出しているToggleButonの配列を作る。
+	 * @return　ToggleButton[]型、ToggleButonの配列
+	 */
+	public ToggleButton[] getToggleButtonsArray() {
+		ToggleButton[] array = {
+				toggleButton_1w,
+				toggleButton_3w,
+				toggleButton_4w,
+				toggleButton_5w,
+				toggleButton_6w,
+				toggleButton_7w,
+				toggleButton_ut3,
+				toggleButton_ut5,
+				toggleButton_ut7,
+				toggleButton_ut9,
+				toggleButton_3i,
+				toggleButton_4i,
+				toggleButton_5i,
+				toggleButton_6i,
+				toggleButton_7i,
+				toggleButton_8i,
+				toggleButton_9i,
+				toggleButton_pw,
+				toggleButton_aw,
+				toggleButton_lw,
+				toggleButton_sw,
+				toggleButton_pt
+		};
+		
+		return array;
 	}
 	
 }
