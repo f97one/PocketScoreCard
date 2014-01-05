@@ -165,7 +165,7 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 		editor.putString(ProjConstants.Prefs.PLAYER_NAME, editText_ownerName.getText().toString());
 		editor.putInt(ProjConstants.Prefs.PLAYER_HDCP, Integer.parseInt(editText_ownerHDCP.getText().toString()));
 		
-		// TODO Spinnerの値を保存する処理を書く
+		// Spinnerの値を保存する処理
 		int position = spinner_clubSettingType.getSelectedItemPosition();
 		editor.putInt(ProjConstants.Prefs.CLUB_SETTING_TYPE, position);
 		saveClubSettingArray(position);
@@ -210,4 +210,5 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 		// 初期値をセット
 		
 	}
+	
 }
