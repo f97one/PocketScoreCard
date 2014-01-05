@@ -55,6 +55,8 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 	int[] defaultClubUse;
 	String[] clubNames;
 
+	private int beforePosition = 0;
+	
 	/**
 	 * 自動生成されたコンストラクタ。Activityなので特に何もしない。
 	 */
@@ -148,6 +150,7 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 		
 		// 所有クラブのセッティングをリストア
 		restoreClubSetting(clubSettingId);
+		
 	}
 	
 	/**
@@ -199,6 +202,8 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 	@Override
 	public void onItemSelected(AdapterView<?> parent, View view, int position,
 			long id) {
+		// 変更前に現在の設定をセーブする
+		saveClubSettingArray(beforePosition);
 		// 使用クラブ設定をリストアする
 		restoreClubSetting(position);
 	}
@@ -277,6 +282,8 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 		// DBを閉じる
 		database.close();
 		dbUtils.close();
+		
+		beforePosition = cluSettingId;
 	}
 	
 }
