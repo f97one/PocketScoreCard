@@ -5,6 +5,8 @@ package net.formula97.android.pocket_score_card;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -47,7 +49,9 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 	ToggleButton toggleButton_sw;
 	ToggleButton toggleButton_pt;
 	
-	ToggleButton[] btns; 
+	ToggleButton[] btns;
+	int[] defaultClubUse;
+	String[] clubNames;
 
 	/**
 	 * 自動生成されたコンストラクタ。Activityなので特に何もしない。
@@ -97,6 +101,10 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 		
 		// ToggleButtonの配列を作る
 		btns = getToggleButtonsArray();
+		
+		// XMLの配列定義から、クラブの一覧とデフォルト使用フラグを取得する
+		defaultClubUse = getResources().getIntArray(R.array.DefaultClubUse);
+		clubNames = getResources().getStringArray(R.array.ClubNames);
 	}
 
 	/* (non-Javadoc)
@@ -249,4 +257,31 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 		return array;
 	}
 	
+	public void restoreClubSetting(int cluSettingId) {
+		DbUtils dbUtils = new DbUtils(this, ProjConstants.DB.DBNAME, null, ProjConstants.DB.CURRENT_DB_VERSION);
+		SQLiteDatabase database = dbUtils.getReadableDatabase();
+		
+		Cursor clubs = dbUtils.getClubSettings(database, cluSettingId);
+		
+		// 取得したCursorが先頭に巻き戻されていない場合は、先頭に巻き戻す
+		if (!clubs.isFirst()) clubs.moveToFirst();
+		
+		boolean using = false;
+		int index = 0;
+		
+		while (!clubs.isAfterLast()) {
+			if (clubs.getInt(1) == 0) {
+				using = false;
+			} else {
+				using = true;
+			}
+			// ボタンのチェックをリストアする
+			btns[index].setChecked(using);
+			
+			index++;
+			clubs.moveToNext();
+		}
+		
+		database.close();
+	}
 }
