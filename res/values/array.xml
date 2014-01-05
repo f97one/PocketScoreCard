@@ -33,4 +33,54 @@
         <item>18</item>
     </string-array>
 
+    <string-array name="ClubNames">
+		<item>01_Club1W</item>
+		<item>02_Club3W</item>
+		<item>03_Club4W</item>
+		<item>04_Club5W</item>
+		<item>05_Club6W</item>
+		<item>06_Club7W</item>
+		<item>07_ClubUt3</item>
+		<item>08_ClubUt5</item>
+		<item>09_ClubTu7</item>
+		<item>10_ClubUt9</item>
+		<item>11_Club3I</item>
+		<item>12_Club4I</item>
+		<item>13_Club5I</item>
+		<item>14_Club6I</item>
+		<item>15_Club7I</item>
+		<item>16_Club8I</item>
+		<item>17_Club9I</item>
+		<item>18_ClubAw</item>
+		<item>19_ClubPw</item>
+		<item>20_ClubLw</item>
+		<item>21_ClubSw</item>
+		<item>22_ClubPt</item>
+    </string-array>
+    
+    <string-array name="DefaultClubUse">
+		<item>true</item>
+		<item>false</item>
+		<item>false</item>
+		<item>false</item>
+		<item>false</item>
+		<item>true</item>
+		<item>false</item>
+		<item>false</item>
+		<item>true</item>
+		<item>false</item>
+		<item>false</item>
+		<item>false</item>
+		<item>false</item>
+		<item>false</item>
+		<item>true</item>
+		<item>false</item>
+		<item>true</item>
+		<item>true</item>
+		<item>false</item>
+		<item>false</item>
+		<item>true</item>
+		<item>true</item>
+    </string-array>
+
 </resources>
