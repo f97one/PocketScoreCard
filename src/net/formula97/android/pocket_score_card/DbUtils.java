@@ -3,10 +3,13 @@
  */
 package net.formula97.android.pocket_score_card;
 
+import java.util.HashMap;
+
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -91,5 +94,32 @@ public class DbUtils extends SQLiteOpenHelper {
 		Cursor q = db.query(table, columns, selection, selectionArgs, groupBy, having, orderBy);
 		q.moveToFirst();
 		return q;
+	}
+
+	/**
+	 * 使用クラブ設定をDBへセーブする。
+	 * @param db SQLiteDatabase型、操作するDBインスタンス
+	 * @param clubSettingId int型、取得するクラブセッティングID
+	 * @param currentSettings HashMap&lt;String, String&gt;型、セーブするクラブ設定
+	 * @param allClubs String[]型、クラブ全体の一覧
+	 */
+	public void saveClubSettings(SQLiteDatabase db, int clubSettingId, HashMap<String, String> currentSettings, String[] allClubs) {
+		// 検索条件をANDで二つ指定するので、execSQLで直接実行する
+		try {
+			// Transactionに処理をまとめる
+			db.beginTransaction();
+			for (int i = 0; i < currentSettings.size(); i++) {
+				db.execSQL(
+						"UPDATE " + ProjConstants.DB.TABLE_CLUB_SETTINGS + " "
+						+ "SET USING = '" + currentSettings.get(allClubs[i]) + "' "
+						+ "WHERE SETTING_TYPE_ID = '" + String.valueOf(clubSettingId)
+						+ "' AND CLUB_NAME = '" + allClubs[i] + "';"
+						);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			db.endTransaction();
+		}
 	}
 }
