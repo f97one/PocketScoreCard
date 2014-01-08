@@ -166,7 +166,7 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 		// Spinnerの値を保存する処理
 		int position = spinner_clubSettingType.getSelectedItemPosition();
 		editor.putInt(ProjConstants.Prefs.CLUB_SETTING_TYPE, position);
-		saveClubSettingArray(position);
+		saveClubSettings(position);
 		
 		editor.commit();
 	}
@@ -175,7 +175,7 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 	 * クラブセッティングIDに対応するクラブの所有情報をDBへ格納する。
 	 * @param settingTypeIndex int型、所有情報をひもづけるクラブセッティングID
 	 */
-	private void saveClubSettingArray(int settingTypeIndex) {
+	private void saveClubSettings(int settingTypeIndex) {
 		String using = "0";
 		HashMap<String, String> map = new HashMap<String, String>();
 		
@@ -203,7 +203,7 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 	public void onItemSelected(AdapterView<?> parent, View view, int position,
 			long id) {
 		// 変更前に現在の設定をセーブする
-		saveClubSettingArray(beforePosition);
+		saveClubSettings(beforePosition);
 		// 使用クラブ設定をリストアする
 		restoreClubSetting(position);
 	}
