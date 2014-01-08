@@ -190,7 +190,7 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 		// DBにクラブ設定をコミットする
 		DbUtils dbUtils = new DbUtils(this, ProjConstants.DB.DBNAME, null, ProjConstants.DB.CURRENT_DB_VERSION);
 		SQLiteDatabase database = dbUtils.getReadableDatabase();
-		dbUtils.saveClubSettings(database, settingTypeIndex, map, clubNames);
+		dbUtils.saveClubSettings(database, settingTypeIndex, map);
 		
 		database.close();
 		dbUtils.close();
