@@ -6,6 +6,7 @@ package net.formula97.android.pocket_score_card;
 import java.util.HashMap;
 
 import android.annotation.TargetApi;
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
@@ -14,6 +15,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Build;
+import android.util.Log;
 
 /**
  * @author HAJIME
@@ -27,7 +29,13 @@ public class DbUtils extends SQLiteOpenHelper {
 			+ "_id INTEGER PRIMARY KEY, "
 			+ "SETTING_TYPE_ID INTEGER, "
 			+ "CLUB_NAME TEXT, "
-			+ "USING INTEGER DEFAULT 0);";
+			+ "USINGFLAG INTEGER DEFAULT 0);";
+	private final String[] FIELDS_CLUB_SETTINGS = {
+			"SETTING_TYPE_ID",
+			"CLUB_NAME",
+			"USINGFLAG"
+	};
+	private Context ctx;
 	
 	/**
 	 * API Level 10のコンストラクタ。基本的にこちらを使う。
@@ -39,7 +47,8 @@ public class DbUtils extends SQLiteOpenHelper {
 	 */
 	public DbUtils(Context context, String name, CursorFactory factory, int version) {
 		super(context, name, factory, version);
-		// TODO Auto-generated constructor stub
+		// Contextの保存
+		setCtx(context);
 	}
 
 	/**
@@ -54,7 +63,8 @@ public class DbUtils extends SQLiteOpenHelper {
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	public DbUtils(Context context, String name, CursorFactory factory, int version, DatabaseErrorHandler errorHandler) {
 		super(context, name, factory, version, errorHandler);
-		// TODO Auto-generated constructor stub
+		// Contextの保存
+		setCtx(context);
 	}
 
 	/* (non-Javadoc)
@@ -64,7 +74,7 @@ public class DbUtils extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		// テーブルの作成
 		db.execSQL(CREATE_CLUB_SETTINGS);
-
+		this.setInitialClubSettings(db);
 	}
 
 	/* (non-Javadoc)
@@ -84,12 +94,12 @@ public class DbUtils extends SQLiteOpenHelper {
 	 */
 	public Cursor getClubSettings(SQLiteDatabase db, int clubSettingId) {
 		String table = ProjConstants.DB.TABLE_CLUB_SETTINGS;
-		String[] columns = {"CLUB_NAME", "USING"};
-		String selection = "SETTING_TYPE_ID = ?";
+		String[] columns = {FIELDS_CLUB_SETTINGS[1], FIELDS_CLUB_SETTINGS[2]};
+		String selection = FIELDS_CLUB_SETTINGS[0] + " = ?";
 		String[] selectionArgs = {String.valueOf(clubSettingId)};
 		String groupBy = null;
 		String having = null;
-		String orderBy = "CLUB_NAME";
+		String orderBy = FIELDS_CLUB_SETTINGS[1];
 		
 		Cursor q = db.query(table, columns, selection, selectionArgs, groupBy, having, orderBy);
 		q.moveToFirst();
@@ -103,7 +113,10 @@ public class DbUtils extends SQLiteOpenHelper {
 	 * @param currentSettings HashMap&lt;String, String&gt;型、セーブするクラブ設定
 	 * @param allClubs String[]型、クラブ全体の一覧
 	 */
-	public void saveClubSettings(SQLiteDatabase db, int clubSettingId, HashMap<String, String> currentSettings, String[] allClubs) {
+	public void saveClubSettings(SQLiteDatabase db, int clubSettingId, HashMap<String, String> currentSettings) {
+		// クラブ一覧の取得
+		String[] clubs = getDBClubList();
+		
 		// 検索条件をANDで二つ指定するので、execSQLで直接実行する
 		try {
 			// Transactionに処理をまとめる
@@ -111,9 +124,9 @@ public class DbUtils extends SQLiteOpenHelper {
 			for (int i = 0; i < currentSettings.size(); i++) {
 				db.execSQL(
 						"UPDATE " + ProjConstants.DB.TABLE_CLUB_SETTINGS + " "
-						+ "SET USING = '" + currentSettings.get(allClubs[i]) + "' "
-						+ "WHERE SETTING_TYPE_ID = '" + String.valueOf(clubSettingId)
-						+ "' AND CLUB_NAME = '" + allClubs[i] + "';"
+						+ "SET " + FIELDS_CLUB_SETTINGS[2] +" = '" + currentSettings.get(clubs[i]) + "' "
+						+ "WHERE " + FIELDS_CLUB_SETTINGS[0] + " = '" + String.valueOf(clubSettingId)
+						+ "' AND " + FIELDS_CLUB_SETTINGS[1] + " = '" + clubs[i] + "';"
 						);
 			}
 		} catch (SQLException e) {
@@ -121,5 +134,60 @@ public class DbUtils extends SQLiteOpenHelper {
 		} finally {
 			db.endTransaction();
 		}
+	}
+
+	/**
+	 * @return
+	 */
+	private String[] getDBClubList() {
+		String[] clubs = getCtx().getResources().getStringArray(R.array.ClubNames);
+		return clubs;
+	}
+	
+	/**
+	 * 使用クラブ一覧の初期データを作成する。
+	 * @param db SQLiteDatabase型、操作するDBインスタンス
+	 */
+	public void setInitialClubSettings(SQLiteDatabase db) {
+		// クラブ一覧の取得
+		String[] clubs = getDBClubList();
+		String[] usingFlags = getCtx().getResources().getStringArray(R.array.DefaultClubUse);
+		long inserted = 0;
+		try {
+			db.beginTransaction();
+			ContentValues val = new ContentValues();
+			for (int i = 0; i < 3; i++) {
+				for (int j = 0; j < clubs.length; j++) {
+					val.put(FIELDS_CLUB_SETTINGS[0], String.valueOf(i));	// セッティングID
+					val.put(FIELDS_CLUB_SETTINGS[1], clubs[j]);				// クラブ名
+					val.put(FIELDS_CLUB_SETTINGS[2], usingFlags[j]);		// デフォルトセッティング
+				}
+				inserted = db.insertOrThrow(ProjConstants.DB.TABLE_CLUB_SETTINGS, null, val);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			Log.w("DbUtils#setInitialClubSettings", "no rows was inserted. throwed SQLException.");
+			e.printStackTrace();
+		} finally {
+			db.endTransaction();
+			Log.d("DbUtils#setInitialClubSettings", "transaction succeeded, " + String.valueOf(inserted) + " row(s) inserted.");
+			inserted = 0;
+		}
+	}
+
+	/**
+	 * 引き渡されたContextオブジェクトを取り出す。
+	 * @return the ctx
+	 */
+	public Context getCtx() {
+		return ctx;
+	}
+
+	/**
+	 * 引き渡されたContextオブジェクトをフィールドへ格納する。
+	 * @param ctx the ctx to set
+	 */
+	public void setCtx(Context ctx) {
+		this.ctx = ctx;
 	}
 }
