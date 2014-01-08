@@ -27,9 +27,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".PlayerInfoPreference" android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
         </activity>
         <activity
 			android:name="com.google.ads.AdActivity"
