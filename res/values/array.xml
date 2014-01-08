@@ -58,7 +58,7 @@
 		<item>22_ClubPt</item>
     </string-array>
     
-    <integer-array name="DefaultClubUse">
+    <string-array name="DefaultClubUse">
 		<item>1</item>
 		<item>0</item>
 		<item>0</item>
@@ -81,6 +81,6 @@
 		<item>0</item>
 		<item>1</item>
 		<item>1</item>
-    </integer-array>
+    </string-array>
 
 </resources>
