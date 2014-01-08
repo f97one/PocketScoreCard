@@ -27,7 +27,7 @@ public class DbUtils extends SQLiteOpenHelper {
 			+ "_id INTEGER PRIMARY KEY, "
 			+ "SETTING_TYPE_ID INTEGER, "
 			+ "CLUB_NAME TEXT, "
-			+ "USING INTEGER DEFAULT 0)";
+			+ "USING INTEGER DEFAULT 0);";
 	
 	/**
 	 * API Level 10のコンストラクタ。基本的にこちらを使う。
