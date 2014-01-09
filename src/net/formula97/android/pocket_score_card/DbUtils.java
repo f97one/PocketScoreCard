@@ -24,17 +24,17 @@ import android.util.Log;
 public class DbUtils extends SQLiteOpenHelper {
 
 	// CLUB_SETTINGSテーブルのDDL
-	private final String CREATE_CLUB_SETTINGS = 
-			"CREATE TABLE CLUB_SETTINGS ("
-			+ "_id INTEGER PRIMARY KEY, "
-			+ "SETTING_TYPE_ID INTEGER, "
-			+ "CLUB_NAME TEXT, "
-			+ "USINGFLAG INTEGER DEFAULT 0);";
 	private final String[] FIELDS_CLUB_SETTINGS = {
 			"SETTING_TYPE_ID",
 			"CLUB_NAME",
 			"USINGFLAG"
 	};
+	private final String CREATE_CLUB_SETTINGS = 
+			"CREATE TABLE " + ProjConstants.DB.TABLE_CLUB_SETTINGS +" ("
+			+ "_id INTEGER PRIMARY KEY, "
+			+ FIELDS_CLUB_SETTINGS[0] + " INTEGER, "
+			+ FIELDS_CLUB_SETTINGS[1] + " TEXT, "
+			+ FIELDS_CLUB_SETTINGS[2] + " INTEGER DEFAULT 0);";
 	private Context ctx;
 	
 	/**
@@ -73,8 +73,8 @@ public class DbUtils extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		// テーブルの作成
-		db.execSQL(CREATE_CLUB_SETTINGS);
-		this.setInitialClubSettings(db);
+		createTables(db);
+		setInitialClubSettings(db);
 	}
 
 	/* (non-Javadoc)
@@ -129,6 +129,7 @@ public class DbUtils extends SQLiteOpenHelper {
 						+ "' AND " + FIELDS_CLUB_SETTINGS[1] + " = '" + clubs[i] + "';"
 						);
 			}
+			db.setTransactionSuccessful();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -161,17 +162,19 @@ public class DbUtils extends SQLiteOpenHelper {
 					val.put(FIELDS_CLUB_SETTINGS[0], String.valueOf(i));	// セッティングID
 					val.put(FIELDS_CLUB_SETTINGS[1], clubs[j]);				// クラブ名
 					val.put(FIELDS_CLUB_SETTINGS[2], usingFlags[j]);		// デフォルトセッティング
+					inserted = db.insertOrThrow(ProjConstants.DB.TABLE_CLUB_SETTINGS, null, val);
+					//Log.d("DbUtils#setInitialClubSettings", "SettingId: " + String.valueOf(i) + ", ClubName: " + clubs[j] + " inserted.");
+					val.clear();
 				}
-				inserted = db.insertOrThrow(ProjConstants.DB.TABLE_CLUB_SETTINGS, null, val);
 			}
+			db.setTransactionSuccessful();
+			Log.d("DbUtils#setInitialClubSettings", "transaction succeeded.");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			Log.w("DbUtils#setInitialClubSettings", "no rows was inserted. throwed SQLException.");
 			e.printStackTrace();
 		} finally {
 			db.endTransaction();
-			Log.d("DbUtils#setInitialClubSettings", "transaction succeeded, " + String.valueOf(inserted) + " row(s) inserted.");
-			inserted = 0;
 		}
 	}
 
@@ -189,5 +192,17 @@ public class DbUtils extends SQLiteOpenHelper {
 	 */
 	public void setCtx(Context ctx) {
 		this.ctx = ctx;
+	}
+	
+	public void createTables(SQLiteDatabase db) {
+		// CLUB_SETTINGSテーブルの作成
+		try {
+			db.execSQL(CREATE_CLUB_SETTINGS);
+			Log.i("DbUtils#createTables()", "table created.");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }
