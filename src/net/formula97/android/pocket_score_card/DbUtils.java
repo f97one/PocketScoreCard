@@ -61,23 +61,29 @@ public class DbUtils extends SQLiteOpenHelper {
 		setCtx(context);
 	}
 
-	/* (non-Javadoc)
-	 * @see android.database.sqlite.SQLiteOpenHelper#onCreate(android.database.sqlite.SQLiteDatabase)
+	/**
+	 * テーブルを作成する。
+	 * @param db SQLiteDatabase型、操作するDBインスタンス
 	 */
-	@Override
-	public void onCreate(SQLiteDatabase db) {
-		// テーブルの作成
-		createTables(db);
-		setInitialClubSettings(db);
-	}
+	public void createTables(SQLiteDatabase db) {
+		// メソッドの修飾子がpublicのためCREATE TABLE文が参照できてしまうので、
+		// finalを付けて変更できないようにしている。
+		final String CREATE_CLUB_SETTINGS = 
+				"CREATE TABLE " + ProjConstants.DB.TABLE_CLUB_SETTINGS +" ("
+				+ "_id INTEGER PRIMARY KEY, "
+				+ FIELDS_CLUB_SETTINGS[0] + " INTEGER, "
+				+ FIELDS_CLUB_SETTINGS[1] + " TEXT, "
+				+ FIELDS_CLUB_SETTINGS[2] + " INTEGER DEFAULT 0);";
 
-	/* (non-Javadoc)
-	 * @see android.database.sqlite.SQLiteOpenHelper#onUpgrade(android.database.sqlite.SQLiteDatabase, int, int)
-	 */
-	@Override
-	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		// TODO Auto-generated method stub
-
+		try {
+			// CLUB_SETTINGSテーブルの作成
+			db.execSQL(CREATE_CLUB_SETTINGS);
+			Log.i("DbUtils#createTables()", "table created.");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 
 	/**
@@ -98,6 +104,42 @@ public class DbUtils extends SQLiteOpenHelper {
 		Cursor q = db.query(table, columns, selection, selectionArgs, groupBy, having, orderBy);
 		q.moveToFirst();
 		return q;
+	}
+
+	/**
+	 * 引き渡されたContextオブジェクトを取り出す。
+	 * @return the ctx
+	 */
+	public Context getCtx() {
+		return ctx;
+	}
+
+	/**
+	 * XMLに定義しているクラブのリストを作成する。
+	 * @return String[]型、XMLに書かれているクラブのリスト
+	 */
+	private String[] getDBClubList() {
+		String[] clubs = getCtx().getResources().getStringArray(R.array.ClubNames);
+		return clubs;
+	}
+
+	/* (non-Javadoc)
+	 * @see android.database.sqlite.SQLiteOpenHelper#onCreate(android.database.sqlite.SQLiteDatabase)
+	 */
+	@Override
+	public void onCreate(SQLiteDatabase db) {
+		// テーブルの作成
+		createTables(db);
+		setInitialClubSettings(db);
+	}
+	
+	/* (non-Javadoc)
+	 * @see android.database.sqlite.SQLiteOpenHelper#onUpgrade(android.database.sqlite.SQLiteDatabase, int, int)
+	 */
+	@Override
+	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		// TODO Auto-generated method stub
+
 	}
 
 	/**
@@ -132,11 +174,11 @@ public class DbUtils extends SQLiteOpenHelper {
 	}
 
 	/**
-	 * @return
+	 * 引き渡されたContextオブジェクトをフィールドへ格納する。
+	 * @param ctx the ctx to set
 	 */
-	private String[] getDBClubList() {
-		String[] clubs = getCtx().getResources().getStringArray(R.array.ClubNames);
-		return clubs;
+	public void setCtx(Context ctx) {
+		this.ctx = ctx;
 	}
 	
 	/**
@@ -170,46 +212,5 @@ public class DbUtils extends SQLiteOpenHelper {
 		} finally {
 			db.endTransaction();
 		}
-	}
-
-	/**
-	 * 引き渡されたContextオブジェクトを取り出す。
-	 * @return the ctx
-	 */
-	public Context getCtx() {
-		return ctx;
-	}
-
-	/**
-	 * 引き渡されたContextオブジェクトをフィールドへ格納する。
-	 * @param ctx the ctx to set
-	 */
-	public void setCtx(Context ctx) {
-		this.ctx = ctx;
-	}
-	
-	/**
-	 * テーブルを作成する。
-	 * @param db SQLiteDatabase型、操作するDBインスタンス
-	 */
-	public void createTables(SQLiteDatabase db) {
-		// メソッドの修飾子がpublicのためCREATE TABLE文が参照できてしまうので、
-		// finalを付けて変更できないようにしている。
-		final String CREATE_CLUB_SETTINGS = 
-				"CREATE TABLE " + ProjConstants.DB.TABLE_CLUB_SETTINGS +" ("
-				+ "_id INTEGER PRIMARY KEY, "
-				+ FIELDS_CLUB_SETTINGS[0] + " INTEGER, "
-				+ FIELDS_CLUB_SETTINGS[1] + " TEXT, "
-				+ FIELDS_CLUB_SETTINGS[2] + " INTEGER DEFAULT 0);";
-
-		try {
-			// CLUB_SETTINGSテーブルの作成
-			db.execSQL(CREATE_CLUB_SETTINGS);
-			Log.i("DbUtils#createTables()", "table created.");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
 	}
 }
