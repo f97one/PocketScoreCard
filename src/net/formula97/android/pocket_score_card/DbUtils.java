@@ -29,12 +29,6 @@ public class DbUtils extends SQLiteOpenHelper {
 			"CLUB_NAME",
 			"USINGFLAG"
 	};
-	private final String CREATE_CLUB_SETTINGS = 
-			"CREATE TABLE " + ProjConstants.DB.TABLE_CLUB_SETTINGS +" ("
-			+ "_id INTEGER PRIMARY KEY, "
-			+ FIELDS_CLUB_SETTINGS[0] + " INTEGER, "
-			+ FIELDS_CLUB_SETTINGS[1] + " TEXT, "
-			+ FIELDS_CLUB_SETTINGS[2] + " INTEGER DEFAULT 0);";
 	private Context ctx;
 	
 	/**
@@ -194,9 +188,22 @@ public class DbUtils extends SQLiteOpenHelper {
 		this.ctx = ctx;
 	}
 	
+	/**
+	 * テーブルを作成する。
+	 * @param db SQLiteDatabase型、操作するDBインスタンス
+	 */
 	public void createTables(SQLiteDatabase db) {
-		// CLUB_SETTINGSテーブルの作成
+		// メソッドの修飾子がpublicのためCREATE TABLE文が参照できてしまうので、
+		// finalを付けて変更できないようにしている。
+		final String CREATE_CLUB_SETTINGS = 
+				"CREATE TABLE " + ProjConstants.DB.TABLE_CLUB_SETTINGS +" ("
+				+ "_id INTEGER PRIMARY KEY, "
+				+ FIELDS_CLUB_SETTINGS[0] + " INTEGER, "
+				+ FIELDS_CLUB_SETTINGS[1] + " TEXT, "
+				+ FIELDS_CLUB_SETTINGS[2] + " INTEGER DEFAULT 0);";
+
 		try {
+			// CLUB_SETTINGSテーブルの作成
 			db.execSQL(CREATE_CLUB_SETTINGS);
 			Log.i("DbUtils#createTables()", "table created.");
 		} catch (SQLException e) {
