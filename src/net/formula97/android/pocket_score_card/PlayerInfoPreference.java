@@ -280,6 +280,7 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 			clubs.moveToNext();
 		}
 		// DBを閉じる
+		clubs.close();
 		database.close();
 		dbUtils.close();
 		
