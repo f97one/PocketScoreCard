@@ -25,12 +25,6 @@
             android:layout_height="wrap_content"
             android:text="@string/course_info" />
 
-        <Button
-            android:id="@+id/btn_player_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/player_info" />
-
     </LinearLayout>
 
     <com.google.ads.AdView

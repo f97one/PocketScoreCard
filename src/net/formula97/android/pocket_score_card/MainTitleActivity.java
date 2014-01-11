@@ -17,8 +17,6 @@ public class MainTitleActivity extends ActionBarActivity implements OnClickListe
 	Button btn_playcont;
 //	@ViewById(R.id.btn_add_browse_course)
 	Button btn_add_browse_course;
-//	@ViewById(R.id.btn_player_info)
-	Button btn_player_info;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,7 +26,6 @@ public class MainTitleActivity extends ActionBarActivity implements OnClickListe
         // ViewIDの取得
         btn_playcont = (Button)findViewById(R.id.btn_playcont);
         btn_add_browse_course = (Button)findViewById(R.id.btn_add_browse_course);
-        btn_player_info = (Button)findViewById(R.id.btn_player_info);
     }
 
     @Override
@@ -72,10 +69,6 @@ public class MainTitleActivity extends ActionBarActivity implements OnClickListe
 		case R.id.btn_add_browse_course:
 			// TODO コース情報表示ボタンを押したときの処理を書く
 			btn_add_browse_course_Click();
-			break;
-		case R.id.btn_player_info:
-			// TODO プレイヤー情報を表示する
-			btn_player_info_Click();
 			break;
 		default:
 			Log.d("MainTitleActivity#onClik", "nothing to operate");
@@ -126,7 +119,6 @@ public class MainTitleActivity extends ActionBarActivity implements OnClickListe
 		
 		btn_playcont.setOnClickListener(this);
 		btn_add_browse_course.setOnClickListener(this);
-		btn_player_info.setOnClickListener(this);
 	}
 
 
