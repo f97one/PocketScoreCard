@@ -1,21 +1,17 @@
 package net.formula97.android.pocket_score_card;
 
-import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.ViewById;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.support.v4.app.NavUtils;
 
 //@EActivity
-public class MainTitleActivity extends Activity implements OnClickListener {
+public class MainTitleActivity extends ActionBarActivity implements OnClickListener {
 
 //	@ViewById(R.id.btn_playcont)
 	Button btn_playcont;
