@@ -7,6 +7,8 @@ public final class ProjConstants {
 		public static final String PLAYER_NAME = "PlayerName";
 		public static final String PLAYER_HDCP = "PlayerHDCP";
 		public static final String CLUB_SETTING_TYPE = "ClubSettingType";
+		public static final String CONTROL_FLIGHT_MODE = "ControlFlightMode";
+		public static final String CHECK_14_CLUBS = "Check14Clubs";
 		
 		// クラブの名称：ウッド
 		public static final String CLUB_1W = "Club1W";

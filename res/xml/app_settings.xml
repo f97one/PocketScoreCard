@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:key="POCKET_SCORE_CARD">
-
-    <PreferenceCategory android:title="@string/pref_basic_owner_info" >
-        <EditTextPreference
-            android:key="basic_player_name"
-            android:title="@string/pref_basic_owner_name" />
-        <EditTextPreference
-            android:key="basic_hdcp"
-            android:title="@string/pref_basic_hdcp" />
-    </PreferenceCategory>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:key="PocketScoreCard_preference">
+	    <CheckBoxPreference
+			android:key="ControlFlightMode"
+			android:defaultValue="true"
+			android:title="@string/flight_mode"
+			android:summaryOn="@string/control_flight_mode"
+			android:summaryOff="@string/disable_flight_mode_control" />
+	    <CheckBoxPreference
+			android:key="Check14Clubs"
+			android:summaryOn="@string/desc_check_14_clubs"
+			android:defaultValue="true"
+			android:title="@string/check_14_clubs"
+			android:summaryOff="@string/ignore_check_clubs" />
 
 </PreferenceScreen>
