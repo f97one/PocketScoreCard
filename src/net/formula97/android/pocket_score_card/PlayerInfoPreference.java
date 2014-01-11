@@ -142,7 +142,7 @@ public class PlayerInfoPreference extends Activity implements OnItemSelectedList
 	 * プリファレンスからプレイヤー情報を取得して、画面に反映する。
 	 */
 	private void loadPlayerDataFromPreference() {
-		editText_ownerName.setText(sp.getString(ProjConstants.Prefs.PREF_NAME, ""));
+		editText_ownerName.setText(sp.getString(ProjConstants.Prefs.PLAYER_NAME, ""));
 		editText_ownerHDCP.setText(String.valueOf(sp.getInt(ProjConstants.Prefs.PLAYER_HDCP, 0)));	// 初期値は0とする
 		// TODO Spinnerへの値セットを実装する
 		int clubSettingId = sp.getInt(ProjConstants.Prefs.CLUB_SETTING_TYPE, 0);
