@@ -986,6 +986,7 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020058;
     }
     public static final class id {
+        public static final int action_app_setting=0x7f060065;
         public static final int action_bar=0x7f06001c;
         public static final int action_bar_activity_content=0x7f060015;
         public static final int action_bar_container=0x7f06001b;
@@ -1189,6 +1190,7 @@ containing a value of this type.
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0b000b;
         public static final int app_name=0x7f0b000d;
+        public static final int app_settings=0x7f0b003f;
         public static final int clubname_1wood=0x7f0b001a;
         public static final int clubname_3wood=0x7f0b001b;
         public static final int clubname_4wood=0x7f0b001c;
@@ -1196,7 +1198,7 @@ containing a value of this type.
         public static final int clubname_6wood=0x7f0b001e;
         public static final int clubname_7wood=0x7f0b001f;
         public static final int course_info=0x7f0b0011;
-        public static final int menu_settings=0x7f0b003f;
+        public static final int menu_settings=0x7f0b0040;
         public static final int play_cont=0x7f0b0010;
         public static final int player_info=0x7f0b000e;
         public static final int pref_basic_hdcp=0x7f0b0015;

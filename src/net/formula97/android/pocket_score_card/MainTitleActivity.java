@@ -43,10 +43,7 @@ public class MainTitleActivity extends ActionBarActivity implements OnClickListe
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case R.id.course_info:
-			btn_add_browse_course_Click();
-			break;
-		case R.id.player_info:
+		case R.id.action_app_setting:
 			btn_player_info_Click();
 			break;
 		default:
