@@ -986,7 +986,7 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020058;
     }
     public static final class id {
-        public static final int action_app_setting=0x7f060065;
+        public static final int action_app_setting=0x7f060066;
         public static final int action_bar=0x7f06001c;
         public static final int action_bar_activity_content=0x7f060015;
         public static final int action_bar_container=0x7f06001b;
@@ -998,6 +998,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f060016;
         public static final int action_menu_presenter=0x7f060017;
         public static final int action_mode_close_button=0x7f060024;
+        public static final int action_player_info=0x7f060065;
         public static final int activity_chooser_view_content=0x7f060025;
         public static final int adView=0x7f060046;
         public static final int always=0x7f06000b;
