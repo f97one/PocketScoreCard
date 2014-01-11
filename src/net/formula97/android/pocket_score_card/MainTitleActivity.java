@@ -44,6 +44,10 @@ public class MainTitleActivity extends ActionBarActivity implements OnClickListe
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.action_app_setting:
+			Intent intent = new Intent(this, AppPreference.class);
+			startActivity(intent);
+			break;
+		case R.id.action_player_info:
 			btn_player_info_Click();
 			break;
 		default:
