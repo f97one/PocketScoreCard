@@ -18,6 +18,9 @@ public class MainTitleActivity extends ActionBarActivity implements OnClickListe
 //	@ViewById(R.id.btn_add_browse_course)
 	Button btn_add_browse_course;
 	
+    /* (non-Javadoc)
+     * @see android.support.v7.app.ActionBarActivity#onCreate(android.os.Bundle)
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +31,9 @@ public class MainTitleActivity extends ActionBarActivity implements OnClickListe
         btn_add_browse_course = (Button)findViewById(R.id.btn_add_browse_course);
     }
 
+    /* (non-Javadoc)
+     * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main_title, menu);
@@ -40,11 +46,11 @@ public class MainTitleActivity extends ActionBarActivity implements OnClickListe
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case R.id.action_app_setting:
+		case R.id.action_app_setting:	// アプリ設定画面
 			Intent intent = new Intent(this, AppPreference.class);
 			startActivity(intent);
 			break;
-		case R.id.action_player_info:
+		case R.id.action_player_info:	// プレイヤー情報画面
 			btn_player_info_Click();
 			break;
 		default:
