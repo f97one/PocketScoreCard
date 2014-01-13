@@ -1246,6 +1246,7 @@ containing a value of this type.
         public static final int list_item=0x7f06003a;
         public static final int lv_courseData=0x7f06004f;
         public static final int lv_courseList=0x7f060053;
+        public static final int menu_send_details=0x7f060077;
         public static final int middle=0x7f060024;
         public static final int never=0x7f06001b;
         public static final int none=0x7f060022;
@@ -1368,6 +1369,7 @@ containing a value of this type.
     }
     public static final class menu {
         public static final int activity_main_title=0x7f0e0000;
+        public static final int menu_send_course=0x7f0e0001;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1425,9 +1427,10 @@ containing a value of this type.
         public static final int disable_flight_mode_control=0x7f0b0045;
         public static final int flight_mode=0x7f0b0044;
         public static final int ignore_check_clubs=0x7f0b0043;
-        public static final int menu_settings=0x7f0b0046;
+        public static final int menu_settings=0x7f0b0047;
         public static final int play_cont=0x7f0b0010;
         public static final int player_info=0x7f0b000e;
+        public static final int post_course_detail=0x7f0b0046;
         public static final int pref_basic_hdcp=0x7f0b0015;
         public static final int pref_basic_info=0x7f0b0012;
         public static final int pref_basic_owner_info=0x7f0b0020;
