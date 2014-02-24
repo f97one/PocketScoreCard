@@ -30,3 +30,7 @@ proguard/
 *.iws
 .idea/
 /.apt_generated
+
+# GFM Viewer for Eclipse
+*.md.html
+*.md.htm
